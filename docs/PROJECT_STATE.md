@@ -12,7 +12,8 @@
 - **PR #2:** OQ-01/OQ-02 e jornada AS-IS/TO-BE integrados à `main`; merge `b4c0a319c5a7dd020affc9991a7cbc9c982b72ec`.
 - **PR #3:** contrato XLSX v0 e dez fixtures sintéticas integrados à `main`; merge `4f91d9cb9fb45d86fa129d1fd146caa85532e724`.
 - **PR #5:** glossário e invariantes CRONO-003 integrados à `main`; merge `13ca91164ffa07e61e21bfe947d3626b76ba623a`.
-- **Ciclo documental atual:** branch `docs/f00-requirements-moscow` para CRONO-004 (Issue #6); prioridades e matriz em revisão por PR, sem merge automático.
+- **PR #7:** registro de requisitos e prioridades CRONO-004 integrados à `main`; merge `6d14fad35704ae8c0ae2314a3e00c32707a5f6ac`.
+- **Ciclo documental atual:** branch `docs/f00-ux-flows-wireframes` para CRONO-005 (Issue #8); fluxos de UX e wireframes em revisão por PR, sem merge automático.
 - Repositório público; nunca incluir dados reais de clientes ou credenciais.
 
 ## Decisões formalmente autorizadas
@@ -39,7 +40,8 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 | F00-E03 / CRONO-001 | PRD redigido; aprovação formal pendente |
 | F00-E04 / CRONO-002 | Contrato XLSX v0 e 10 fixtures sintéticas integrados à `main` pelo PR #3; verificação estrutural CI aprovada, revisão semântica/OQ-08 e aceite humano ainda pendentes |
 | CRONO-003 / Issue #4 | Glossário e invariantes integrados à `main` no PR #5; semântica OQ-03/OQ-08/OQ-09 e aceite humano pendentes |
-| CRONO-004 / Issue #6 | RF/RNF, proposta MoSCoW e registro legível por máquinas preparados na branch; validação estrutural CI aprovada (run 38632240223); aceite humano ainda pendente |
+| CRONO-004 / Issue #6 | RF/RNF, proposta MoSCoW e registro estruturado integrados à `main` pelo PR #7; validação documental CI aprovada, aceite do PRD e decisões pendentes |
+| CRONO-005 / Issue #8 | Fluxos, wireframes de baixa fidelidade e roteiro de usabilidade criados na branch; revisão humana e testes com usuários pendentes |
 | F00-E05 | Riscos e métricas preliminares; aprovação pendente |
 | Gate G0 | Não aprovado |
 
@@ -49,10 +51,10 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 
 1. Revisar e validar o rascunho AS-IS/TO-BE da F00-E02, distinguindo hipóteses de fatos observados.
 2. Planejar entrevistas/validação dos cenários quando participantes estiverem disponíveis.
-3. Revisar CRONO-004: matriz dos 21 RF/RNF, proposta MoSCoW, premissas e evidências; deliberar OQ-05/OQ-06 antes de ratificar prioridades.
-4. Revisar CRONO-003 e decidir OQ-03/OQ-08/OQ-09 antes de estabilizar tipos, unidades e política de identidade para F04.
+3. Revisar CRONO-005: FL-01..05 e W-01..11, especialmente a distinção entre importar, auditar e revisar achados; rotas e textos são propostas.
+4. Deliberar OQ-03/OQ-05/OQ-06/OQ-07/OQ-08/OQ-09 antes da implementação correspondente; a revisão UX não substitui tais decisões.
 5. Revisar formalmente PRD, decisões abertas e checklist do Gate G0.
 
 ## Limitações observadas
 
-Não há código de aplicação, testes funcionais da aplicação, deploy ou métricas de produto. Existem checagens de fixtures OOXML aprovadas no GitHub Actions, mas não constituem testes funcionais do CronoCheck. A publicação de documentos e a aprovação das duas decisões não comprovam funcionamento do software ou conclusão da Fase 00.
+Não há código de aplicação, protótipo clicável, testes de usabilidade com pessoas, testes funcionais da aplicação, deploy ou métricas de produto. Existem checagens de fixtures OOXML aprovadas no GitHub Actions, mas não constituem testes funcionais do CronoCheck. A publicação de documentos e a aprovação das duas decisões não comprovam funcionamento do software ou conclusão da Fase 00.
