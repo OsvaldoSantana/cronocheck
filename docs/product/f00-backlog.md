@@ -100,7 +100,7 @@ A escolha final de Vite/Next.js, provedor OIDC e hosting pertence à OQ-04; revi
 | CRONO-006-01 | Comparar monólito modular, camadas sem fronteiras e microsserviços | Blueprint C.1–C.7, CRONO-003 | `docs/architecture/adr/ADR-001-modular-monolith.md` | Alternativas, forças, ownership, proibições e trade-offs | Redigido; proposta sem aceite |
 | CRONO-006-02 | Comparar React SPA/Vite, Next.js/BFF e frontend acoplado | Blueprint C.2, CRONO-005, OQ-04 | `docs/architecture/adr/ADR-002-frontend-boundary.md` | Auth/CORS/CSRF, API, UX e deploy analisados sem decidir infraestrutura automaticamente | Redigido; proposta sem aceite |
 | CRONO-006-03 | Modelar contexto e contêineres C4 L1/L2 | ADR-001/002 | `docs/architecture/context-and-containers.md` | Atores, fronteiras de confiança, componentes e invariantes explícitos | Redigido; aguardando revisão |
-| CRONO-006-04 | Validar referências e estados documentais | CRONO-006-01..03 | Validador + workflow GitHub Actions | Teste de estrutura e links verde, sem confundir com testes de arquitetura C# | Em elaboração, CI pendente |
+| CRONO-006-04 | Validar referências e estados documentais | CRONO-006-01..03 | Validador + workflow GitHub Actions | Teste de estrutura e links verde, sem confundir com testes de arquitetura C# | Validação estrutural documental aprovada no GitHub Actions (run 38635987543); revisão humana e decisão arquitetural pendentes |
 | CRONO-006-05 | Ratificar ou rejeitar ADRs / definir cronograma de OQ-04 | OQ-04, F00/G0 | Registro de decisões e aceite do responsável | Data, autoridade, consequências e ADRs atualizados; Gate G0 permanece independente | Pendente |
 
 **Nota:** os ADRs registram alternativas preferidas **provisoriamente**. Publicá-los ou dar merge
