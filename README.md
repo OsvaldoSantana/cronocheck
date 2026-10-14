@@ -30,3 +30,10 @@ Consulte [`CONTRIBUTING.md`](CONTRIBUTING.md) antes de propor alterações. O co
 - [Catálogo de fixtures XLSX](tests/fixtures/README.md) — dez arquivos sintéticos e resultados esperados versionados.
 - [Validação estrutural](tests/fixtures/validate_fixtures.py) — verificações OOXML e categorias de teste, independentes do futuro produto.
 - **Pendente:** OQ-08 (calendário e semântica de duração, entre outras decisões), análise do PRD e Gate G0.
+
+## Modelo conceitual de domínio (CRONO-003)
+
+- [Glossário de domínio](docs/product/domain-glossary.md) — conceitos de Activity, Dependency, Calendar, Duration, ScheduleVersion, AuditRun e rastreabilidade.
+- [Invariantes de domínio](docs/product/domain-invariants.md) — regras de integridade, separação entre importação e auditoria e cenários de teste propostos.
+- [Issue CRONO-003](https://github.com/OsvaldoSantana/cronocheck/issues/4) — entregáveis, critérios de aceite e pendências.
+- **Decisões abertas:** OQ-03 (precedências), OQ-08 (semântica temporal/XLSX) e OQ-09 (identidade interna e ambiguidade de IDs); **não** são regras de produção aprovadas.

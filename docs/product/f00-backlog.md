@@ -1,4 +1,4 @@
-# CronoCheck — Backlog detalhado da Fase 00 — v1.4
+# CronoCheck — Backlog detalhado da Fase 00 — v1.5
 
 ## Legenda de estados
 Não iniciado · Em elaboração · Redigido, aguardando validação técnica · Tecnicamente validado ·
@@ -46,6 +46,18 @@ Aceite (blueprint): 3–5 cenários priorizados e validados, ou limitações exp
 | T-E04-02 | Fixtures sintéticas representativas | T-E04-01 (provisória) | `tests/fixtures/*.xlsx`, README e expected-results.json | OOXML íntegro, 10 planilhas sintéticas e casos esperados | Em elaboração; 10 XLSX versionados, verificação estrutural CI aprovada (run 38629233298); revisão humana pendente |
 
 | T-E04-03 | Teste de integridade do pacote de fixtures | T-E04-02 | `validate_fixtures.py` e `.github/workflows/fixtures-validation.yml` | Pipeline lê 10 OOXML, confere categorias estruturais/manifesto e diff | Em elaboração; CI estrutural aprovado (run 38629233298); revisão humana ainda pendente |
+
+## CRONO-003 — Glossário e semântica do domínio (atividade transversal da Fase 00)
+Escopo previsto no blueprint L: modelar conceitos de atividade, calendário, duração, dependência e versão antes de implementar a aplicação.
+
+| ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
+|---|---|---|---|---|---|
+| CRONO-003-01 | Glossário de atividades, versões, auditoria, calendários e vínculos | Blueprint C.5–C.7, PRD, F00-E04 sintética | `docs/product/domain-glossary.md` | Termos, exemplos, origens e pendências documentados | Redigido, aguardando validação técnica e revisão humana |
+| CRONO-003-02 | Invariantes e cenários de verificação | CRONO-003-01 | `docs/product/domain-invariants.md` | Erros vs achados, proveniência, integridade e segurança discriminados | Redigido, aguardando validação técnica |
+| CRONO-003-03 | Deliberar semântica de IDs/duração/predecessoras | OQ-03, OQ-08 e OQ-09 | Decisões documentadas em `open-questions.md` | Aprovação com data, responsável e evidência, sem alteração implícita da semântica do MVP | Pendente |
+| CRONO-003-04 | Revisão final e aceite documental | CRONO-003-01 a 03 | Registro de aceite na issue CRONO-003 / PR | Critérios revisados pelo responsável, referências coerentes | Aguardando aprovação |
+
+**Nota:** este trabalho não equivale à etapa F04-E01 de implementação do esquema canônico em C#; o Gate G0 ainda depende dos demais entregáveis F00.
 
 ## F00-E05 — Riscos, prioridades e definição de sucesso
 | ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
