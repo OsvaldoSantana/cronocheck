@@ -128,39 +128,46 @@ def structural_findings(rows: list[dict[str, str]], invalid_dates: list[str]) ->
             else:
                 neighbors[pred].append(aid)
 
-    # Tarjan strongly connected components. No dependency-type conversion is performed.
-    index = 0
-    stack: list[str] = []
-    indices: dict[str, int] = {}
-    low: dict[str, int] = {}
-    on_stack = set()
-
-    def dfs(v: str) -> None:
-        nonlocal index
-        indices[v] = low[v] = index
-        index += 1
-        stack.append(v)
-        on_stack.add(v)
-        for w in neighbors[v]:
-            if w not in indices:
-                dfs(w)
-                low[v] = min(low[v], low[w])
-            elif w in on_stack:
-                low[v] = min(low[v], indices[w])
-        if low[v] == indices[v]:
-            group = []
-            while True:
-                u = stack.pop()
-                on_stack.remove(u)
-                group.append(u)
-                if u == v:
-                    break
-            if len(group) > 1 or (len(group) == 1 and v in neighbors[v]):
-                result.append({"category": "dependency_cycle", "activity_ids": sorted(group)})
-
-    for aid in sorted(ids):
-        if aid not in indices:
-            dfs(aid)
+    # Iterative Kosaraju SCC; avoids Python recursion limits on the 5,000-row chain.
+    vertices = set(ids)
+    reverse: dict[str, list[str]] = defaultdict(list)
+    for source, targets in neighbors.items():
+        for target in targets:
+            reverse[target].append(source)
+    seen: set[str] = set()
+    finished: list[str] = []
+    for root in sorted(vertices):
+        if root in seen:
+            continue
+        stack = [(root, False)]
+        while stack:
+            node, post = stack.pop()
+            if post:
+                finished.append(node)
+                continue
+            if node in seen:
+                continue
+            seen.add(node)
+            stack.append((node, True))
+            for other in neighbors[node]:
+                if other not in seen:
+                    stack.append((other, False))
+    assigned: set[str] = set()
+    for root in reversed(finished):
+        if root in assigned:
+            continue
+        stack = [root]
+        component: list[str] = []
+        assigned.add(root)
+        while stack:
+            node = stack.pop()
+            component.append(node)
+            for other in reverse[node]:
+                if other not in assigned:
+                    assigned.add(other)
+                    stack.append(other)
+        if len(component) > 1 or (len(component) == 1 and root in neighbors[root]):
+            result.append({"category": "dependency_cycle", "activity_ids": sorted(component)})
 
     for i, x in enumerate(rows, start=2):
         if "C" + str(i) not in invalid_dates and "D" + str(i) not in invalid_dates:
