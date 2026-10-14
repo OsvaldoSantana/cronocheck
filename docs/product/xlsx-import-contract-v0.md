@@ -174,7 +174,7 @@ o modelo profissional de calendário, as escolhas de normalização nem o Gate G
 ## 8. Critérios de saída da etapa F00-E04
 
 - [x] Contrato de referência com tipos, campos, fluxo, erros e limites documentado.
-- [ ] Fixtures geradas, inspecionadas e versionadas no GitHub com expected result.
+- [x] Fixtures geradas, inspecionadas estruturalmente no GitHub Actions (run 38629233298) e versionadas na branch com expected result — revisão humana ainda pendente.
 - [ ] Revisão humana da semântica proposta e registro de deliberação sobre OQ-08.
 - [ ] Confirmar rastreabilidade RF-03/RF-04/RF-05/RF-06 e RNF relevantes.
 - [ ] Aprovação explícita de F00-E04/G0 quando aplicável.
