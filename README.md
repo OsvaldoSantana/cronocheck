@@ -23,3 +23,10 @@ Consulte [`CONTRIBUTING.md`](CONTRIBUTING.md) antes de propor alterações. O co
 - [Registro de decisões da Fase 00](docs/product/decisions-2026-10-14.md): OQ-01 e OQ-02 aprovadas; outras pendentes.
 - [Jornadas AS-IS / TO-BE](docs/product/journey-as-is-to-be.md): rascunho hipotético da F00-E02, ainda sem validação empírica ou aceite humano.
 - A autorização para **dados sintéticos** não autoriza publicar arquivos reais de clientes; o PRD e o Gate G0 continuam pendentes de aprovação.
+
+## Contrato XLSX v0 (Fase 00)
+
+- [Contrato de importação v0](docs/product/xlsx-import-contract-v0.md) — proposta sintética a revisar, não parser implementado.
+- [Catálogo de fixtures XLSX](tests/fixtures/README.md) — dez arquivos sintéticos e resultados esperados versionados.
+- [Validação estrutural](tests/fixtures/validate_fixtures.py) — verificações OOXML e categorias de teste, independentes do futuro produto.
+- **Pendente:** OQ-08 (calendário e semântica de duração, entre outras decisões), análise do PRD e Gate G0.
