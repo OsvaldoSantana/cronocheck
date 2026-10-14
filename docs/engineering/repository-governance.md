@@ -123,7 +123,7 @@ são decisões administrativas de repositório, separadas das OQ-03..09.
 - [x] Templates para bug, funcionalidade, tarefa, PR e CODEOWNERS escritos.
 - [x] CONTRIBUTING e SECURITY com política de dados sintéticos e segredos.
 - [x] Proposta de rulesets e privacidade documentada sem alterar configurações.
-- [ ] Validação documental CI aprovada e evidência do run registrada.
+- [x] Validação documental CI aprovada em [run 38637316391](https://github.com/OsvaldoSantana/cronocheck/actions/runs/38637316391): cinco validadores, sem código de aplicação.
 - [ ] Revisão humana de termos, permissões e decisões GOV-01/GOV-02.
 - [ ] Policies efetivas de ruleset aplicadas (se autorizadas) e comportamento testado.
 - [ ] Gate G0 formalmente aprovado (atividade separada; não é pré-requisito para publicar esta proposta).
