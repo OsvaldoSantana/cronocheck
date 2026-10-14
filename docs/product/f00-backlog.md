@@ -1,0 +1,55 @@
+# CronoCheck — Backlog detalhado da Fase 00 — v1.2
+
+## Legenda de estados
+Não iniciado · Em elaboração · Redigido, aguardando validação técnica · Tecnicamente validado ·
+Aguardando aprovação · Aprovado · Bloqueado.
+Regra: texto gerado NÃO comprova validação técnica. "Tecnicamente validado" exige revisão humana
+registrada; "Aprovado" exige aprovação do responsável pelo produto com data.
+
+## Estado de persistência (explícito)
+| Documento | Gerado nesta sessão | Gravado no repositório real |
+|---|---|---|
+| docs/product/prd.md | Sim (pacote ZIP) | Não |
+| docs/product/personas-jtbd.md | Sim (pacote ZIP) | Não |
+| docs/product/open-questions.md | Sim (pacote ZIP) | Não |
+| docs/product/f00-backlog.md | Sim (pacote ZIP) | Não |
+| docs/product/traceability-matrix.md | Sim (pacote ZIP) | Não |
+
+## F00-E01 — Entrevistar usuários-alvo e registrar cenários reais
+Aceite (blueprint): 3–5 cenários priorizados e validados, ou limitações explicitadas.
+
+| ID | Descrição | Objetivo | Dependências | Entregável | Critério de aceite verificável | Evidência esperada | Estado |
+|---|---|---|---|---|---|---|---|
+| T-E01-01 | Redigir personas hipotéticas | Ponto de partida para validação | — | personas-jtbd.md §1 | 3 personas com objetivos, responsabilidades, necessidades, tarefas, fricções e critérios | Arquivo revisado por humano | Redigido, aguardando validação técnica |
+| T-E01-02 | Consolidar 3–5 cenários com os 11 atributos | Entrada para F00-E02 e testes | T-E01-01 | personas-jtbd.md §2 | Cada CU possui os 11 campos preenchidos | Arquivo revisado por humano | Redigido, aguardando validação técnica |
+| T-E01-03 | Separar hipótese/desconhecido/evidência/validação | Evitar hipótese lida como fato | T-E01-01 | personas-jtbd.md §3 | 4 categorias explícitas | Arquivo revisado por humano | Redigido, aguardando validação técnica |
+| T-E01-04 | Entrevistar usuários reais | Validar ou refutar hipóteses | OQ-01; acesso a usuários | Notas de entrevista | 3–5 cenários validados ou limitação registrada | Notas/roteiros anexados | Bloqueado (OQ-01 pendente; acesso a usuários não confirmado) |
+
+## F00-E02 — Jornada AS-IS / TO-BE
+| ID | Descrição | Dependências | Entregável | Estado |
+|---|---|---|---|---|
+| T-E02-01 | Mapa AS-IS/TO-BE a partir de CU-01..CU-05 | T-E01-02 | Mapa AS-IS/TO-BE | Não iniciado (fora do escopo desta execução) |
+
+## F00-E03 — MVP, fora de escopo e matriz de requisitos
+| ID | Descrição | Objetivo | Dependências | Entregável | Critério de aceite verificável | Evidência esperada | Estado |
+|---|---|---|---|---|---|---|---|
+| T-E03-01 | PRD com RF-01..11 e RNF-01..10 por extenso | Escopo testável | — | prd.md §5–§9 | 21 requisitos com critério em 4 partes | Revisão humana registrada | Redigido, aguardando validação técnica |
+| T-E03-02 | Separar obrigatoriedade MVP x ordem de implementação | Corrigir MoSCoW da v1.1 | T-E03-01 | prd.md §7 | Nenhum item do MVP fora do escopo de lançamento | Revisão humana registrada | Redigido, aguardando validação técnica |
+| T-E03-03 | Dependências entre requisitos | Sequenciamento válido | T-E03-01 | prd.md §10 | Cadeia sem ciclos | Revisão humana | Redigido, aguardando validação técnica |
+| T-E03-04 | Matriz de rastreabilidade | Controle de mudança/teste | T-E03-01, T-E01-02 | traceability-matrix.md | 21 requisitos ligados a etapa EAP, sem órfãos | Revisão humana | Redigido, aguardando validação técnica |
+| T-E03-05 | Aprovação formal do PRD (CRONO-001) | Fechar escopo | T-E03-01..04 | Registro de aprovação | Aprovação nominal e datada | Ata/registro | Não iniciado (depende de validação técnica) |
+
+## F00-E04 — Formato XLSX de referência, calendário e regras
+| ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
+|---|---|---|---|---|---|
+| T-E04-01 | Layout de colunas de referência | OQ-02 | Contrato de importação v0 | Tipos e obrigatoriedade por coluna documentados | Bloqueado (OQ-02 pendente) |
+| T-E04-02 | Fixtures sintéticas representativas | T-E04-01 | tests/fixtures/ + README | Casos de H.2 do blueprint com expected result | Bloqueado (depende de T-E04-01) |
+
+## F00-E05 — Riscos, prioridades e definição de sucesso
+| ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
+|---|---|---|---|---|---|
+| T-E05-01 | Registro operacional R-01..R-09 | — | prd.md §12 | 9 riscos com 10 atributos; classificação original preservada | Redigido, aguardando validação técnica |
+| T-E05-02 | Métricas de sucesso propostas | T-E03-01 | prd.md §11 | Métricas sem dado inventado | Redigido, aguardando validação técnica |
+| T-E05-03 | Gate G0 | F00-E01..E05 | Registro de gate | Checklist de gate do blueprint completo | Não iniciado — não aprovado nesta execução |
+
+Nenhuma entrevista, teste ou aprovação foi realizada.

@@ -1,0 +1,47 @@
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# .NET
+**/bin/
+**/obj/
+TestResults/
+*.coverage
+coverage/
+
+# Node e frontend
+node_modules/
+.next/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Ambiente e segredos
+.env
+.env.*
+!.env.example
+*.pfx
+*.key
+*.pem
+secrets.json
+appsettings.Local.json
+appsettings.*.local.json
+
+# Temporários
+*.tmp
+*.bak
+*.log
+*.zip
+*.7z
+*.rar
+
+# Bancos locais
+*.db
+*.sqlite
+*.sqlite3
