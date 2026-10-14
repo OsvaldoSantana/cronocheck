@@ -1,6 +1,6 @@
 # CronoCheck — PRD v1.2 (Fase 00)
 Status: Redigido, aguardando validação técnica (revisão humana). Não aprovado.
-Persistência: arquivo gerado fora do repositório; ainda NÃO gravado em \`docs/product/\` do repositório real.
+Persistência: arquivo gerado fora do repositório; ainda NÃO gravado em `docs/product/` do repositório real.
 Fonte normativa: CRONOCHECK_BLUEPRINT_V1.md (este PRD detalha, não substitui, o blueprint).
 
 ## 1. Problema e contexto
@@ -39,7 +39,7 @@ valor, a confirmar com uso real.
 - Ambientes local/teste/produção, logs estruturados, testes automatizados, backup e processo de
   lançamento.
 
-**Fora do MVP (blueprint A.6, sem alteração):** leitura nativa de \`.mpp\`, integração online com
+**Fora do MVP (blueprint A.6, sem alteração):** leitura nativa de `.mpp`, integração online com
 Project/Primavera, edição automática do cronograma, CPM multicritério com calendários complexos,
 Monte Carlo, IA generativa, marketplace de plugins, modo offline, cobrança/SaaS multiempresa e
 microsserviços — possibilidades para a fase 09, não promessas.
@@ -130,6 +130,6 @@ Classificações originais (probabilidade/impacto) do blueprint preservadas sem 
 | R-04 | UI sofisticada sem fluxo utilizável | Média | Alto | Priorizar estética antes da tarefa | Baixa adoção, retrabalho | Protótipos e testes de tarefa desde F02 | UX | F02 | Taxa de sucesso de tarefa nos testes |
 | R-05 | Auditoria insuficiente ou editável | Média | Alto | Falha de desenho do AuditEvent/transação | Perda de confiança na trilha | Evento transacional, retenção, integridade e restore | Dados/Segurança | F03-E04, F08-E03 | Resultado de testes de integridade e do ensaio de restauração |
 | R-06 | Upload de arquivos adversariais | Média | Alto | Conteúdo malicioso/zip bomb em XLSX | Indisponibilidade ou exposição | Limites, parsing seguro, storage privado, testes | Segurança | F04-E06 | Casos maliciosos de teste bloqueados x total |
-| R-07 | Escopo cresce por integração com Project | Alta | Médio | Pressão por integração nativa | Atraso do MVP | \`.mpp\` fora do MVP; backlog separado (F09) | Produto | F09 | Solicitações registradas x aceitas no MVP |
+| R-07 | Escopo cresce por integração com Project | Alta | Médio | Pressão por integração nativa | Atraso do MVP | `.mpp` fora do MVP; backlog separado (F09) | Produto | F09 | Solicitações registradas x aceitas no MVP |
 | R-08 | Falhas de CI/dívida de testes | Média | Alto | Pressão de prazo reduzindo testes | Regressões não detectadas | Gates obrigatórios, DoD, builds reproduzíveis | Engenharia | F01-E04, contínuo | PRs bloqueados por gate e regressões pós-merge |
 | R-09 | Ausência de usuários reais para validação | Média | Alto | Falta de acesso a usuários-alvo | Hipóteses erradas chegando à implementação | Entrevistas e testes antes de F03/F07 (OQ-01) | Produto | F00-E01, F02-E05, F07-E05 | Hipóteses confirmadas x refutadas |
