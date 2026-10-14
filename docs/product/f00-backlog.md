@@ -84,7 +84,7 @@ Os cenários de uso permanecem hipotéticos, sem entrevistas e sem protótipo cl
 | CRONO-005-01 | Definir arquitetura de informação e navegação contextual | Blueprint D.1–D.2, CU-01..05, F00-E02 | `docs/ux/flows.md` | Seis seções de navegação e contexto do projeto/versão, cinco fluxos e estados de erro documentados | Redigido, aguardando validação técnica |
 | CRONO-005-02 | Desenhar wireframes de baixa fidelidade desktop/mobile | CRONO-005-01 | `docs/ux/wireframes.md` | W-01..W-11 cobrem nove telas mínimas, wizard e detalhe de achado; sem omitir acessibilidade/retorno | Redigido, aguardando validação técnica |
 | CRONO-005-03 | Preparar verificação de usabilidade e acessibilidade | CRONO-005-02 | `docs/ux/usability-review.md` | UXT-01..10 com critérios verificáveis, sem relatos de entrevista inventados | Redigido, aguardando revisão humana |
-| CRONO-005-04 | Adicionar verificação documental automatizada | CRONO-005-01..03 | `tests/documentation/validate_ux_flows.py` e workflow CI | Links/IDs/estados/gates presentes; CI verde, com logs do PR | Em elaboração, aguarda execução e revisão |
+| CRONO-005-04 | Adicionar verificação documental automatizada | CRONO-005-01..03 | `tests/documentation/validate_ux_flows.py` e workflow CI | Links/IDs/estados/gates presentes; CI verde, com logs do PR | CI de UX/documentação aprovado (run 38634317016); revisão humana pendente |
 | CRONO-005-05 | Revisão final de nomenclatura, hipóteses e decisões | OQ-03, OQ-07, OQ-08, OQ-09 | Registro na issue #8 e no PR | Aceite humano com data e pendências explícitas; Gate G0 segue independente | Aguardando aprovação |
 
 **Nota:** F02-E02 prevê protótipo clicável; wireframes Markdown não satisfazem esse aceite e não
