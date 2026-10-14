@@ -68,7 +68,7 @@ obrigatoriedade para lançamento é **proposta**, não aprovação tácita do PR
 |---|---|---|---|---|---|
 | CRONO-004-01 | Consolidar RF-01..11 e RNF-01..10, com linha de corte MVP | Blueprint, PRD, CRONO-003 | `requirements-register.json`, `requirements-prioritization.md` | 21 entradas únicas; 11 RF Must e 10 RNF Must propostos; nenhuma funcionalidade removida | Redigido, aguardando revisão humana |
 | CRONO-004-02 | Sincronizar rastreabilidade humana | CRONO-004-01, F00-E04 | `traceability-matrix.md` | Critérios, etapas, cenários e fixtures existentes referenciados sem presumir execução de testes C# | Redigido, aguardando revisão humana |
-| CRONO-004-03 | Validar integridade documental automaticamente | CRONO-004-01/02 | `tests/documentation/validate_requirements.py` e workflow GitHub Actions | Checagem automática de 21 requisitos, IDs e referências bem-sucedida | Em elaboração; CI não confirmado até executar |
+| CRONO-004-03 | Validar integridade documental automaticamente | CRONO-004-01/02 | `tests/documentation/validate_requirements.py` e workflow GitHub Actions | Checagem automática de 21 requisitos, IDs e referências bem-sucedida | Verificação documental executada com sucesso no GitHub Actions (run 38632240223); revisão humana pendente |
 | CRONO-004-04 | Aprovar prioridades e registrar ressalvas | OQ-05, OQ-06 e PRD | Aprovação formal no PR + `open-questions.md` | Aceite humano datado, sem aprovar Gate G0 tacitamente | Pendente |
 
 O registro de prioridades distingue `Must` como obrigatoriedade **proposta para a release**
