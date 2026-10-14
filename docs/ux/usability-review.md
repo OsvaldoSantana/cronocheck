@@ -93,7 +93,7 @@ Não utilizar informações confidenciais da empresa, clientes ou obras.
 1. O planejador importa cronogramas ou essa atribuição cabe a outro papel?
 2. A hierarquia de atividades deve aparecer na fila de achados ou no detalhe?
 3. A revisão necessita estados, níveis de aprovação e justificativa obrigatória? Qual regra?
-4. Como o usuário identifica a diferença entre dois \`AuditRun\` para a mesma versão?
+4. Como o usuário identifica a diferença entre dois `AuditRun` para a mesma versão?
 5. Deve haver visão multiprojeto ou apenas home por projeto (OQ-07)?
 6. Como o calendário profissional afetará o formulário de datas e prazos (OQ-03/08)?
 7. A relação de dois registros com mesmo ID de origem exige um passo adicional de conciliação (OQ-09)?
