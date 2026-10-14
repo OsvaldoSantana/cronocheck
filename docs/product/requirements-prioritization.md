@@ -105,7 +105,7 @@ duplicar critérios de forma divergente: referencia `prd.md` e associa requisito
 - [x] RF-08 a RF-11 mantidos no MVP sem rebaixamento.
 - [x] RNF-03/04/08 identificados como provisórios, sem SLA assumido.
 - [x] Fontes de aceite, etapas EAP, dependências, cenários e evidências rastreáveis.
-- [ ] Verificação automática do registro aprovada em CI.
+- [x] Verificação estrutural documental aprovada em [GitHub Actions run #38632240223](https://github.com/OsvaldoSantana/cronocheck/actions/runs/38632240223) (21 requisitos, referências, metas provisórias, grafo sem ciclos).
 - [ ] Revisão técnica/humana do PR, incluindo o tratamento da decisão OQ-06.
 - [ ] Aprovação formal do PRD e do Gate G0 (não concedidas por este trabalho).
 
