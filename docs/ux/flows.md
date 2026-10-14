@@ -79,7 +79,7 @@ flowchart TD
 
 | Cenário | Persona hipotética | Fluxo | RF associados | Ponto de decisão |
 |---|---|---|---|---|
-| **CU-01** | P-01 Planejador | FL-01 — Importar e auditar | RF-01..RF-07 | confirmar versão só com prévia válida |
+| **CU-01** | P-01 Planejador | FL-01 — Importar e auditar | RF-01, RF-02, RF-03, RF-04, RF-05, RF-06, RF-07 | confirmar versão só com prévia válida |
 | **CU-02** | P-01 / P-02 | FL-03 — Comparar versões | RF-05, RF-09 | identidade ambígua não produz pareamento silencioso |
 | **CU-03** | P-03 Auditor | FL-02 — Investigar e decidir achado | RF-07, RF-08, RF-11 | transição só após evidência e confirmação |
 | **CU-04** | P-03 / P-02 | FL-04 — Exportar | RF-10, RF-11 | acesso e escopo do relatório conferidos |
