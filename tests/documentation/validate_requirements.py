@@ -93,7 +93,7 @@ def validate() -> int:
         for path in item["preparatory_fixture_references"]:
             check(path.startswith("tests/fixtures/"), f"{rid}: unexpected fixture path {path}")
             check((ROOT / path).is_file(), f"{rid}: broken fixture {path}")
-            check("tests/fixtures/" + Path(path).name in matrix, f"{rid}: fixture missing from matrix")
+            check(Path(path).name in matrix, f"{rid}: fixture missing from matrix")
         for scenario in item["proposed_test_scenarios"]:
             check(re.fullmatch(r"T-DOM-\d{2}", scenario) is not None and scenario in domain,
                   f"{rid}: undocumented test scenario {scenario}")
