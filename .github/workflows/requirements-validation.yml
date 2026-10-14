@@ -1,0 +1,32 @@
+name: Requirements documentation checks
+
+on:
+  pull_request:
+    paths:
+      - "docs/product/**"
+      - "docs/PROJECT_STATE.md"
+      - "docs/CRONOCHECK_BLUEPRINT_V1.md"
+      - "tests/documentation/**"
+      - ".github/workflows/requirements-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/product/**"
+      - "tests/documentation/**"
+      - ".github/workflows/requirements-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  requirements-traceability:
+    name: Validate requirements and traceability
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python version
+        run: python3 --version
+      - name: Check 21 requirements, references and gates
+        run: python3 tests/documentation/validate_requirements.py
