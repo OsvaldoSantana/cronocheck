@@ -1,0 +1,30 @@
+name: Fixture contract checks
+
+on:
+  pull_request:
+    paths:
+      - "tests/fixtures/**"
+      - "docs/product/xlsx-import-contract-v0.md"
+      - ".github/workflows/fixtures-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "tests/fixtures/**"
+      - ".github/workflows/fixtures-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-synthetic-xlsx:
+    name: Verify synthetic XLSX fixtures
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Print Python version
+        run: python3 --version
+      - name: Verify OOXML packages, manifest and structural cases
+        run: python3 tests/fixtures/validate_fixtures.py
