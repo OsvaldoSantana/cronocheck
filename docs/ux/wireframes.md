@@ -128,7 +128,7 @@ decisão irrevogável.
 │ Importar cronograma • Etapa 3 de 4 — Prévia                                   │
 │ ● Arquivo   ● Mapeamento   ● Prévia   ○ Confirmação                             │
 ├──────────────────────────────────────────────────────────────────────────────┤
-│ Origem: Activities • 4 atividades | Erros impeditivos: 0 | Avisos: 1*          │
+│ Origem: Activities • 4 atividades | Erros impeditivos: 0 | Avisos: 0           │
 │ [Erros] [Avisos] [Linhas]                                                      │
 │                                                                              │
 │ Linha   ID      Nome                    Início      Fim          Predecessora  │
@@ -141,8 +141,7 @@ decisão irrevogável.
 └──────────────────────────────────────────────────────────────────────────────┘
 \`\`\`
 
-_*Valores de ilustração não são saídas reais. O fixture basic-valid de referência
-não tem aviso estruturado esperado; quando utilizada essa fixture em teste, exibir 0._
+_Os valores da figura são exemplos de apresentação, não saídas reais de uma API. Para o fixture `basic-valid.xlsx`, a especificação prevê zero avisos estruturais nesta fase._
 **Erros impeditivos:** por exemplo “Activities!C2: data \`2026-02-30\` não é válida”;
 ação primária desabilitada até resolução. **Achados de auditoria (posteriores):**
 duplicatas, predecessoras ausentes ou ciclos não devem ser falsamente rotulados como
