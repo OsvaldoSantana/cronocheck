@@ -116,6 +116,8 @@ flowchart TD
   P -- Concluída --> S[Achados e origem, regras e versão explícitas]
 ```
 
+**Idempotência:** repetições de confirmação e de execução devem respeitar a identidade da operação e o escopo do projeto, sem duplicar resultados indevidamente. A política técnica exata será definida na F04.
+
 **Fronteiras críticas:** (a) prévia não gera versão; (b) importação pode ser aceita com
 IDs duplicados, predecessor inexistente ou datas invertidas — problemas são **achados
 de auditoria**, não necessariamente erros impeditivos; (c) datas ilegíveis, fórmula
