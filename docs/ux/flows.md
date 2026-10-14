@@ -29,7 +29,7 @@ O menu principal pode estar associado ao **contexto de projeto**; a seleção/tr
 
 ### Sitemap conceitual
 
-\`\`\`mermaid
+```mermaid
 flowchart TD
   LOGIN[Autenticação] --> PICK[Projetos autorizados]
   PICK --> HOME[Home do projeto]
@@ -53,25 +53,25 @@ flowchart TD
   ISSUES --> REPORTS
   CFG --> MEMBERS[Membros e papéis autorizados]
   HOME -. hipótese CU-05 .-> MULTI[Visão de pendências entre projetos autorizados]
-\`\`\`
+```
 
 ## 3. Rotas candidatas, não contrato de frontend
 
 | Tela | URI ilustrativa | Contexto obrigatório | Entrada/saída principal |
 |---|---|---|---|
-| Acesso | \`/login\` | sessão | autenticar → projetos |
-| Projetos | \`/projects\` | usuário autorizado | selecionar → home |
-| Home de projeto | \`/projects/:projectId\` | projeto | navegação/CTA “Importar cronograma” |
-| Importações | \`/projects/:projectId/imports\` | projeto | histórico → nova importação |
-| Wizard | \`/projects/:projectId/imports/new\` | projeto | arquivo → mapeamento → prévia → confirmação |
-| Versões | \`/projects/:projectId/versions\` | projeto | selecionar versão e auditoria |
-| Auditorias | \`/projects/:projectId/audits\` | projeto, versão opcional | execuções → achados |
-| Pendências | \`/projects/:projectId/findings\` | projeto, versão, execução | lista → detalhe |
-| Detalhe do achado | \`/projects/:projectId/findings/:findingId\` | projeto, achado e versão | regra/evidência → revisão |
-| Comparação | \`/projects/:projectId/versions/compare\` | duas versões do mesmo projeto | diferenças → relatório |
-| Relatórios | \`/projects/:projectId/reports\` | projeto e escopo autorizado | filtro → exportar |
-| Configurações | \`/projects/:projectId/settings\` | projeto | membros/papéis com controle |
-| Visão multiprojeto | \`/projects/attention\` | projetos autorizados | prioridade → projeto; **hipótese CU-05** |
+| Acesso | `/login` | sessão | autenticar → projetos |
+| Projetos | `/projects` | usuário autorizado | selecionar → home |
+| Home de projeto | `/projects/:projectId` | projeto | navegação/CTA “Importar cronograma” |
+| Importações | `/projects/:projectId/imports` | projeto | histórico → nova importação |
+| Wizard | `/projects/:projectId/imports/new` | projeto | arquivo → mapeamento → prévia → confirmação |
+| Versões | `/projects/:projectId/versions` | projeto | selecionar versão e auditoria |
+| Auditorias | `/projects/:projectId/audits` | projeto, versão opcional | execuções → achados |
+| Pendências | `/projects/:projectId/findings` | projeto, versão, execução | lista → detalhe |
+| Detalhe do achado | `/projects/:projectId/findings/:findingId` | projeto, achado e versão | regra/evidência → revisão |
+| Comparação | `/projects/:projectId/versions/compare` | duas versões do mesmo projeto | diferenças → relatório |
+| Relatórios | `/projects/:projectId/reports` | projeto e escopo autorizado | filtro → exportar |
+| Configurações | `/projects/:projectId/settings` | projeto | membros/papéis com controle |
+| Visão multiprojeto | `/projects/attention` | projetos autorizados | prioridade → projeto; **hipótese CU-05** |
 
 **Não implementar as URIs agora.** São nomes legíveis propostos, sujeitos a ADRs e ao desenho F02-E01. IDs usados na URL não são controles de autorização. O estado de filtros e paginação pode ser serializado na URL com parâmetros permitidos; não incluir tokens, dados sigilosos ou destinos arbitrários. Um link de retorno deve ser interno e validado, não permitir redirecionamento aberto.
 
@@ -87,7 +87,7 @@ flowchart TD
 
 ### FL-01 — Upload XLSX → auditoria explicável
 
-\`\`\`mermaid
+```mermaid
 flowchart TD
   A[Selecionar projeto] --> B[Selecionar arquivo XLSX]
   B --> C[Upload e validação de segurança]
@@ -114,7 +114,7 @@ flowchart TD
   P -- Falhou --> R[Motivo e repetição controlada]
   R --> O
   P -- Concluída --> S[Achados e origem, regras e versão explícitas]
-\`\`\`
+```
 
 **Fronteiras críticas:** (a) prévia não gera versão; (b) importação pode ser aceita com
 IDs duplicados, predecessor inexistente ou datas invertidas — problemas são **achados
@@ -125,7 +125,7 @@ política efetiva de retenção.
 
 ### FL-02 — Lista de achados → evidência → revisão
 
-\`\`\`mermaid
+```mermaid
 flowchart TD
   A[Pendências: filtro + pesquisa] --> B[Selecionar achado]
   B --> C[Detalhe com RuleId, RuleVersion, atividades, SourceLocator]
@@ -141,7 +141,7 @@ flowchart TD
   K --> L[Sucesso: exibir ator, instante e estado novo]
   L --> M[Voltar à lista com filtros e paginação preservados]
   F --> M
-\`\`\`
+```
 
 **Revisar não é apagar:** Finding, RuleVersion e Evidence permanecem visíveis. Estados de revisão
 exatos, transições e obrigatoriedade da justificativa ainda dependem de F06; os controles
@@ -149,7 +149,7 @@ do wireframe são **conceituais** e não aprovam uma máquina de estados.
 
 ### FL-03 — Comparação de versões (CU-02)
 
-\`\`\`mermaid
+```mermaid
 flowchart TD
   A[Versões do projeto] --> B[Selecionar duas versões confirmadas]
   B --> C{Mesmo projeto e IDs distintos?}
@@ -162,7 +162,7 @@ flowchart TD
   G -- Não --> I[Resultado rastreável]
   H --> I
   I --> J[Inspecionar atividade e navegar de volta]
-\`\`\`
+```
 
 ### FL-04 — Exportação CSV/PDF (CU-04)
 
@@ -182,11 +182,11 @@ saltar a validação de papéis.
 
 | Transição | Contexto mantido | O que fazer diante de desatualização |
 |---|---|---|
-| Projetos → Projeto | \`projectId\` validado pelo servidor | retornar seleção ou informar sem acesso |
+| Projetos → Projeto | `projectId` validado pelo servidor | retornar seleção ou informar sem acesso |
 | Projeto → Wizard | projeto atual, intenção de importação | se sessão expirar, solicitar nova autenticação e validar estado antes de continuar |
-| Versões → Auditorias | \`projectId\`, \`scheduleVersionId\` | mostrar versão imutável e última auditoria disponível, nunca substituir por outra silenciosamente |
+| Versões → Auditorias | `projectId`, `scheduleVersionId` | mostrar versão imutável e última auditoria disponível, nunca substituir por outra silenciosamente |
 | Pendências → Achado | filtros, ordenação, página, contexto da auditoria | voltar para consulta anterior; se achado mudou, sinalizar conflito |
-| Achado → Atividade | versão, identificador interno e \`SourceLocator\` | não resolver ID de origem duplicado por correspondência arbitrária |
+| Achado → Atividade | versão, identificador interno e `SourceLocator` | não resolver ID de origem duplicado por correspondência arbitrária |
 | Comparação → Detalhe | IDs de versões base/alvo no mesmo projeto | não aceitar outra versão sem ação explícita |
 | Relatório → Arquivo | versão, regras, filtros e permissão | exibir dados efetivos de exportação e permitir repetir quando falhar |
 
@@ -214,7 +214,7 @@ saltar a validação de papéis.
   e alternativa à interação por mouse.
 - Inputs mapeados têm label, descrição de finalidade, erro associado, tipo e exemplo;
   confirmação de ação irreversível exige contexto e foco dentro do diálogo.
-- Jobs longos: \`role=status\`/equivalente anuncia alterações relevantes sem
+- Jobs longos: `role=status`/equivalente anuncia alterações relevantes sem
   flood de mensagens; não inferir tempo restante sem medida real.
 - Tabelas: ordenação, busca, filtros e seleção acessíveis, sem depender apenas de hover.
 - Gráficos nunca são única representação; estados também precisam de texto e
