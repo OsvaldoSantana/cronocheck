@@ -118,7 +118,7 @@ sem alterar visibilidade nem direitos de acesso. Regras administrativas da
 | CRONO-007-01 | Padronizar issues | `.github/ISSUE_TEMPLATE/` | Templates para defeitos, funcionalidades e tarefas, sem dados reais | Redigido na branch; revisão pendente |
 | CRONO-007-02 | Padronizar PR e owners | `.github/PULL_REQUEST_TEMPLATE.md`, `.github/CODEOWNERS` | Rastreabilidade, testes realmente executados e cautela para mantenedor único | Redigido na branch; revisão pendente |
 | CRONO-007-03 | Definir política de contribuição e segurança | `CONTRIBUTING.md`, `SECURITY.md`, `docs/engineering/repository-governance.md` | Conduta Git, reporte privado e restrições claras de dados sintéticos | Redigido na branch; revisão pendente |
-| CRONO-007-04 | Unificar CI em todos os PRs | `.github/workflows/repository-quality-gate.yml`, `tests/documentation/validate_governance.py` | Executar requisitos, UX, arquitetura, fixtures e governança num job único | Criado na branch; CI pendente |
+| CRONO-007-04 | Unificar CI em todos os PRs | `.github/workflows/repository-quality-gate.yml`, `tests/documentation/validate_governance.py` | Executar requisitos, UX, arquitetura, fixtures e governança num job único | CI unificado executado com sucesso no GitHub Actions (run 38637316391); revisão humana pendente |
 | CRONO-007-05 | Deliberar visibilidade e enforcement | GOV-01 e GOV-02, regras de branch GitHub | Aprovação explícita + comprovação de configuração efetivamente aplicada | **Pendente**; nenhuma mudança administrativa |
 
 **Limitações:** consulta de rulesets vazia e leitura de proteção clássica com HTTP 403
