@@ -1,6 +1,6 @@
 # CronoCheck — Personas, JTBD e cenários prioritários (Fase 00) — v1.2
 Status: Redigido, aguardando validação técnica. Não aprovado.
-Persistência: ainda NÃO gravado no repositório real.
+Persistência: baseline v1.2 versionada na `main` pelo PR #1 em 14/10/2026. Personas e cenários continuam hipotéticos e não validados.
 
 Nenhuma entrevista, pesquisa ou dado quantitativo foi realizado ou inventado. Todo conteúdo abaixo é
 hipótese derivada de CRONOCHECK_BLUEPRINT_V1.md, salvo indicação explícita.

@@ -1,5 +1,5 @@
 # CronoCheck — Matriz de rastreabilidade — v1.2
-Status: Redigido, aguardando validação técnica. Persistência: ainda NÃO gravado no repositório.
+Status: Redigido, aguardando validação técnica. Persistência: baseline v1.2 versionada na `main` pelo PR #1 em 14/10/2026. Nenhum requisito foi implementado, testado ou aprovado por esse fato.
 Nenhum teste existe; nenhum requisito está implementado; nenhum link para commit, issue, teste ou PR
 foi criado, pois nenhum existe. A coluna "ID de teste" permanece "—" até a criação real do teste.
 

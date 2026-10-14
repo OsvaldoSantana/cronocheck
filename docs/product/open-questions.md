@@ -1,15 +1,15 @@
-# CronoCheck — Decisões pendentes (Fase 00) — v1.2
-Status: Redigido, aguardando validação técnica. Nenhuma decisão aprovada.
-Persistência: ainda NÃO gravado no repositório real.
+# CronoCheck — Registro de decisões (Fase 00) — v1.3
+Status: OQ-01 e OQ-02 aprovadas em 14/10/2026; OQ-03 a OQ-07 pendentes.
+Baseline v1.2 publicada na main pelo PR #1; decisões desta revisão documentadas em `decisions-2026-10-14.md`.
 
-| ID | Decisão | Alternativas | Impactos e riscos | Recomendação (não aprovada) e justificativa | Dependências | Prioridade | Aprovador | Estado |
+| ID | Decisão | Alternativas | Impactos e riscos | Recomendação e justificativa | Dependências | Prioridade | Aprovador | Estado |
 |---|---|---|---|---|---|---|---|---|
-| OQ-01 | Avançar a Fase 00 com documentos baseados em hipóteses ou aguardar entrevistas | (a) avançar com hipóteses mantendo validação aberta; (b) bloquear até entrevistar | R-09 (Média/Alto): hipóteses erradas chegando a F03+ | (a) — permite progresso documental sem encerrar a validação; entrevistas continuam obrigatórias antes de F03/F07 | F00-E01 (T-E01-04) | Alta | Responsável pelo produto | Pendente |
-| OQ-02 | Origem dos dados para fixtures e contrato de importação v0 | (a) sintéticos e anonimizados; (b) reais mascarados mediante autorização | R-01 (Alta/Alto); risco de LGPD/confidencialidade com dados reais | (a) inicialmente — elimina exposição de dados; substituir/complementar por amostras reais anonimizadas quando autorizado | F00-E04 | Alta | Produto/Importação | Pendente |
+| OQ-01 | Avançar a Fase 00 com documentos baseados em hipóteses ou aguardar entrevistas | (a) avançar com hipóteses mantendo validação aberta; (b) bloquear até entrevistar | R-09 (Média/Alto): hipóteses erradas chegando a F03+ | (a) — permite progresso documental sem encerrar a validação; entrevistas continuam obrigatórias antes de F03/F07 | F00-E01 (T-E01-04) | Alta | Responsável pelo produto | Aprovado — alternativa (a), 14/10/2026 |
+| OQ-02 | Origem dos dados para fixtures e contrato de importação v0 | (a) sintéticos e anonimizados; (b) reais mascarados mediante autorização | R-01 (Alta/Alto); risco de LGPD/confidencialidade com dados reais | (a) inicialmente — elimina exposição de dados; substituir/complementar por amostras reais anonimizadas quando autorizado | F00-E04 | Alta | Responsável pelo produto | Aprovado — alternativa (a), 14/10/2026 |
 | OQ-03 | Tipos de dependência suportados no MVP | (a) apenas FS simples; (b) ampliar (SS, FF, SF, defasagens complexas) | R-02 (Alta/Alto) | (a) — coerente com A.5/C.7 do blueprint; demais tipos com rejeição/aviso explícito | F05-E04 | Média | Domínio | Pendente |
 | OQ-04 | Momento das decisões finais de stack/infra (Vite vs Next.js, OIDC, hospedagem) | (a) agora; (b) Fase 01 via ADR | R-03 (Média/Alto) | (b) — blueprint C.2 reserva essas decisões à F01 | F01-E01 | Média | Arquitetura | Pendente |
 | OQ-05 | Natureza das metas RNF-03, RNF-04, RNF-08 | (a) compromisso; (b) provisórias com calibração | Prometer SLA sem medição real | (b) — calibrar em F05-E07/F08-E02/F08-E03 após definir cenário de referência | F08-E02, F08-E03 | Média | Engenharia | Pendente |
 | OQ-06 | Ordem de implementação de RF-08 a RF-11 após o motor de auditoria (PD-01 do PRD) | (a) sequenciar após RF-06/07 mantendo-os obrigatórios no MVP; (b) antecipar parte (ex.: AuditEvent de RF-11 já em F03) | Confundir ordem técnica com redução de escopo | (a), com a ressalva de que a base de AuditEvent (RNF-07/RF-11) nasce em F03-E04 como o blueprint prevê — nenhuma redução de escopo | PRD §7 | Média | Responsável pelo produto | Pendente |
 | OQ-07 | Incluir CU-05 (priorização entre projetos) entre os cenários prioritários | (a) incluir; (b) manter só CU-01..CU-04 da iteração 1 | Cenário derivado sem evidência empírica | (a) — cobre o dashboard operacional, que é item do MVP; sujeito a validação | personas-jtbd.md §2 | Baixa | Responsável pelo produto | Pendente |
 
-Nenhum item deve ser citado como "decidido" até que Estado = "Aprovado", com responsável e data.
+Apenas OQ-01 e OQ-02 foram explicitamente aprovadas; ver `decisions-2026-10-14.md` para o escopo exato. Não há aprovação do PRD, das personas, do Gate G0 nem dos itens OQ-03 a OQ-07.

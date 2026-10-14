@@ -1,4 +1,4 @@
-# CronoCheck — Backlog detalhado da Fase 00 — v1.2
+# CronoCheck — Backlog detalhado da Fase 00 — v1.3
 
 ## Legenda de estados
 Não iniciado · Em elaboração · Redigido, aguardando validação técnica · Tecnicamente validado ·
@@ -6,14 +6,14 @@ Aguardando aprovação · Aprovado · Bloqueado.
 Regra: texto gerado NÃO comprova validação técnica. "Tecnicamente validado" exige revisão humana
 registrada; "Aprovado" exige aprovação do responsável pelo produto com data.
 
-## Estado de persistência (explícito)
-| Documento | Gerado nesta sessão | Gravado no repositório real |
+## Estado de persistência (após merge do PR #1)
+| Documento | Origem | Versionado na `main` |
 |---|---|---|
-| docs/product/prd.md | Sim (pacote ZIP) | Não |
-| docs/product/personas-jtbd.md | Sim (pacote ZIP) | Não |
-| docs/product/open-questions.md | Sim (pacote ZIP) | Não |
-| docs/product/f00-backlog.md | Sim (pacote ZIP) | Não |
-| docs/product/traceability-matrix.md | Sim (pacote ZIP) | Não |
+| docs/product/prd.md | Baseline ZIP v1.2 | Sim (PR #1, 14/10/2026) |
+| docs/product/personas-jtbd.md | Baseline ZIP v1.2 | Sim (PR #1, 14/10/2026) |
+| docs/product/open-questions.md | Baseline ZIP v1.2 | Sim (PR #1, 14/10/2026) |
+| docs/product/f00-backlog.md | Baseline ZIP v1.2 | Sim (PR #1, 14/10/2026) |
+| docs/product/traceability-matrix.md | Baseline ZIP v1.2 | Sim (PR #1, 14/10/2026) |
 
 ## F00-E01 — Entrevistar usuários-alvo e registrar cenários reais
 Aceite (blueprint): 3–5 cenários priorizados e validados, ou limitações explicitadas.
@@ -23,12 +23,12 @@ Aceite (blueprint): 3–5 cenários priorizados e validados, ou limitações exp
 | T-E01-01 | Redigir personas hipotéticas | Ponto de partida para validação | — | personas-jtbd.md §1 | 3 personas com objetivos, responsabilidades, necessidades, tarefas, fricções e critérios | Arquivo revisado por humano | Redigido, aguardando validação técnica |
 | T-E01-02 | Consolidar 3–5 cenários com os 11 atributos | Entrada para F00-E02 e testes | T-E01-01 | personas-jtbd.md §2 | Cada CU possui os 11 campos preenchidos | Arquivo revisado por humano | Redigido, aguardando validação técnica |
 | T-E01-03 | Separar hipótese/desconhecido/evidência/validação | Evitar hipótese lida como fato | T-E01-01 | personas-jtbd.md §3 | 4 categorias explícitas | Arquivo revisado por humano | Redigido, aguardando validação técnica |
-| T-E01-04 | Entrevistar usuários reais | Validar ou refutar hipóteses | OQ-01; acesso a usuários | Notas de entrevista | 3–5 cenários validados ou limitação registrada | Notas/roteiros anexados | Bloqueado (OQ-01 pendente; acesso a usuários não confirmado) |
+| T-E01-04 | Entrevistar usuários reais | Validar ou refutar hipóteses | Acesso a usuários (OQ-01 já aprovada) | Notas de entrevista | 3–5 cenários validados ou limitação registrada | Notas/roteiros anexados | Não iniciado — participantes ainda não confirmados |
 
 ## F00-E02 — Jornada AS-IS / TO-BE
 | ID | Descrição | Dependências | Entregável | Estado |
 |---|---|---|---|---|
-| T-E02-01 | Mapa AS-IS/TO-BE a partir de CU-01..CU-05 | T-E01-02 | Mapa AS-IS/TO-BE | Não iniciado (fora do escopo desta execução) |
+| T-E02-01 | Mapa AS-IS/TO-BE a partir de CU-01..CU-05 | T-E01-02; OQ-01 aprovada | `journey-as-is-to-be.md` | Em elaboração — rascunho hipotético publicado para revisão; sem validação real |
 
 ## F00-E03 — MVP, fora de escopo e matriz de requisitos
 | ID | Descrição | Objetivo | Dependências | Entregável | Critério de aceite verificável | Evidência esperada | Estado |
@@ -42,8 +42,8 @@ Aceite (blueprint): 3–5 cenários priorizados e validados, ou limitações exp
 ## F00-E04 — Formato XLSX de referência, calendário e regras
 | ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
 |---|---|---|---|---|---|
-| T-E04-01 | Layout de colunas de referência | OQ-02 | Contrato de importação v0 | Tipos e obrigatoriedade por coluna documentados | Bloqueado (OQ-02 pendente) |
-| T-E04-02 | Fixtures sintéticas representativas | T-E04-01 | tests/fixtures/ + README | Casos de H.2 do blueprint com expected result | Bloqueado (depende de T-E04-01) |
+| T-E04-01 | Layout de colunas de referência | OQ-02 aprovada; escopo de dados sintéticos | Contrato de importação v0 | Tipos e obrigatoriedade por coluna documentados | Não iniciado — autorização recebida |
+| T-E04-02 | Fixtures sintéticas representativas | T-E04-01 | tests/fixtures/ + README | Casos de H.2 do blueprint com expected result | Não iniciado — aguarda layout de referência |
 
 ## F00-E05 — Riscos, prioridades e definição de sucesso
 | ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
@@ -52,4 +52,4 @@ Aceite (blueprint): 3–5 cenários priorizados e validados, ou limitações exp
 | T-E05-02 | Métricas de sucesso propostas | T-E03-01 | prd.md §11 | Métricas sem dado inventado | Redigido, aguardando validação técnica |
 | T-E05-03 | Gate G0 | F00-E01..E05 | Registro de gate | Checklist de gate do blueprint completo | Não iniciado — não aprovado nesta execução |
 
-Nenhuma entrevista, teste ou aprovação foi realizada.
+Nenhuma entrevista ou teste foi realizado. Somente OQ-01 e OQ-02 receberam aprovação explícita do responsável pelo produto em 14/10/2026 (`decisions-2026-10-14.md`); PRD, F00-E02 e Gate G0 continuam sem aprovação.
