@@ -1,0 +1,46 @@
+name: "Relatar defeito"
+description: "Registrar um comportamento incorreto reproduzível (não relatar vulnerabilidades publicamente)"
+title: "fix: "
+body:
+  - type: markdown
+    attributes:
+      value: "Use somente dados sintéticos e remova credenciais, informações pessoais ou cronogramas reais. Para vulnerabilidades, consulte SECURITY.md."
+  - type: textarea
+    id: context
+    attributes:
+      label: "Contexto e comportamento observado"
+      description: "Qual foi o erro, em que tela/etapa e qual o impacto?"
+      placeholder: "Descreva o comportamento observado e o esperado."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Passos para reproduzir"
+      description: "Preferir fixture sintética do repositório, dados de entrada e resultado esperado."
+      placeholder: "1. Abrir ...\n2. Selecionar ...\n3. Observar ..."
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Ambiente e versões"
+      description: "Commit, navegador/sistema ou versão do backend, quando existirem."
+  - type: input
+    id: refs
+    attributes:
+      label: "Rastreabilidade"
+      description: "RF/RNF, CU, CRONO-NNN, FNN-ENN, RuleId ou referências de documentos."
+      placeholder: "Ex.: RF-03; CU-01; F04-E02"
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidências e limitações"
+      description: "Logs sanitizados, prints de dados sintéticos, testes executados e o que não foi verificado."
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: "Segurança dos dados"
+      options:
+        - label: "Confirmei que não incluí credenciais, informações pessoais nem dados reais de clientes."
+          required: true
