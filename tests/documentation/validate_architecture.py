@@ -42,7 +42,7 @@ def main():
             target=link.split("#",1)[0]
             if target:
                 check((path.parent/target).exists(),f"{path.name}: invalid local link: {link}")
-    check(re.search(r"Estado:\s*Proposto",one) and re.search(r"Estado:\s*Proposto",two),
+    check("**Estado:** Proposto" in one and "**Estado:** Proposto" in two,
           "ADRs must remain proposed")
     check("Monólito modular" in one and "Microsserviços" in one, "ADR-001 alternatives missing")
     check("transa" in one.lower() and "AuditEvent" in one, "ADR-001 transactional rationale missing")
