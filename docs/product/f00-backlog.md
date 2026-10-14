@@ -45,7 +45,7 @@ Aceite (blueprint): 3–5 cenários priorizados e validados, ou limitações exp
 | T-E04-01 | Layout de colunas de referência | OQ-02 aprovada; semântica OQ-08 pendente | `docs/product/xlsx-import-contract-v0.md` | Tipos e obrigatoriedade por coluna documentados | Redigido, aguardando validação técnica; semântica ainda provisória |
 | T-E04-02 | Fixtures sintéticas representativas | T-E04-01 (provisória) | `tests/fixtures/*.xlsx`, README e expected-results.json | OOXML íntegro, 10 planilhas sintéticas e casos esperados | Em elaboração; 10 XLSX versionados, verificação estrutural CI aprovada (run 38629233298); revisão humana pendente |
 
-| T-E04-03 | Teste de integridade do pacote de fixtures | T-E04-02 | `validate_fixtures.py` e `.github/workflows/fixtures-validation.yml` | Pipeline lê 10 OOXML, confere categorias estruturais/manifesto e diff | Em elaboração; CI ainda não confirmado |
+| T-E04-03 | Teste de integridade do pacote de fixtures | T-E04-02 | `validate_fixtures.py` e `.github/workflows/fixtures-validation.yml` | Pipeline lê 10 OOXML, confere categorias estruturais/manifesto e diff | Em elaboração; CI estrutural aprovado (run 38629233298); revisão humana ainda pendente |
 
 ## F00-E05 — Riscos, prioridades e definição de sucesso
 | ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
