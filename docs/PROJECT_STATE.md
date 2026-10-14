@@ -39,7 +39,7 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 | F00-E03 / CRONO-001 | PRD redigido; aprovação formal pendente |
 | F00-E04 / CRONO-002 | Contrato XLSX v0 e 10 fixtures sintéticas integrados à `main` pelo PR #3; verificação estrutural CI aprovada, revisão semântica/OQ-08 e aceite humano ainda pendentes |
 | CRONO-003 / Issue #4 | Glossário e invariantes integrados à `main` no PR #5; semântica OQ-03/OQ-08/OQ-09 e aceite humano pendentes |
-| CRONO-004 / Issue #6 | RF/RNF, proposta MoSCoW e registro legível por máquinas preparados na branch; validação CI e aceite ainda pendentes |
+| CRONO-004 / Issue #6 | RF/RNF, proposta MoSCoW e registro legível por máquinas preparados na branch; validação estrutural CI aprovada (run 38632240223); aceite humano ainda pendente |
 | F00-E05 | Riscos e métricas preliminares; aprovação pendente |
 | Gate G0 | Não aprovado |
 
