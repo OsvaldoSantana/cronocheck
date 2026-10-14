@@ -20,3 +20,7 @@ Os hashes são do conteúdo dos arquivos recebido em 2026-10-14, calculados ante
 **Segurança:** foi realizada triagem textual por padrões comuns de credenciais, contatos e dados de projeto antes de publicar em repositório público. Essa triagem não substitui uma auditoria abrangente de informação sensível.
 
 **Governança:** o Gate G0 permanece não aprovado. A simples publicação não significa validação técnica nem aceite humano.
+
+## Evolução posterior à baseline
+
+O manifesto preserva os **hashes dos seis arquivos exatamente como recebidos e integrados pelo PR #1** (merge `628880fb01b8e375d46e1d24ccab0f6aea88134f`). Alterações posteriores — como a correção de metadados temporais, decisões OQ-01/OQ-02 e o rascunho F00-E02 — mudam os hashes dos arquivos de trabalho. Para auditar os originais, consulte os blobs da árvore associada ao PR #1, não compare esses hashes originais com a versão de trabalho atual. A proveniência das atualizações deve ser recuperada pelo histórico Git e pelos PRs posteriores.
