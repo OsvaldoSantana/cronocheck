@@ -13,7 +13,7 @@
 - **PR #3:** contrato XLSX v0 e dez fixtures sintéticas integrados à `main`; merge `4f91d9cb9fb45d86fa129d1fd146caa85532e724`.
 - **PR #5:** glossário e invariantes CRONO-003 integrados à `main`; merge `13ca91164ffa07e61e21bfe947d3626b76ba623a`.
 - **PR #7:** registro de requisitos e prioridades CRONO-004 integrados à `main`; merge `6d14fad35704ae8c0ae2314a3e00c32707a5f6ac`.
-- **Ciclo documental atual:** branch `docs/f00-ux-flows-wireframes` para CRONO-005 (Issue #8); fluxos de UX e wireframes em revisão por PR, sem merge automático.
+- **Ciclo documental atual:** branch `docs/f00-ux-flows-wireframes` para CRONO-005 (Issue #8); fluxos de UX e wireframes em revisão por PR, com checagem documental de UX aprovada (run 38634317016), sem merge automático.
 - Repositório público; nunca incluir dados reais de clientes ou credenciais.
 
 ## Decisões formalmente autorizadas
