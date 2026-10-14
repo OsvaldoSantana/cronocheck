@@ -14,7 +14,7 @@
 - **PR #5:** glossário e invariantes CRONO-003 integrados à `main`; merge `13ca91164ffa07e61e21bfe947d3626b76ba623a`.
 - **PR #7:** registro de requisitos e prioridades CRONO-004 integrados à `main`; merge `6d14fad35704ae8c0ae2314a3e00c32707a5f6ac`.
 - **PR #9:** fluxos e wireframes CRONO-005 integrados à `main`; merge `f8675dce8dc6338689bc27b5cb29df97e3a406f8`.
-- **Ciclo documental atual:** branch `docs/f00-architecture-adrs` para CRONO-006 (Issue #10); ADR-001/002 e C4 L1/L2 propostos para revisão, sem merge automático.
+- **Ciclo documental atual:** branch `docs/f00-architecture-adrs` para CRONO-006 (Issue #10); ADR-001/002 e C4 L1/L2 propostos para revisão; checagem documental CI aprovada (run 38635987543), sem merge automático.
 - Repositório público; nunca incluir dados reais de clientes ou credenciais.
 
 ## Decisões formalmente autorizadas
