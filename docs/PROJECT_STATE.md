@@ -14,7 +14,8 @@
 - **PR #5:** glossário e invariantes CRONO-003 integrados à `main`; merge `13ca91164ffa07e61e21bfe947d3626b76ba623a`.
 - **PR #7:** registro de requisitos e prioridades CRONO-004 integrados à `main`; merge `6d14fad35704ae8c0ae2314a3e00c32707a5f6ac`.
 - **PR #9:** fluxos e wireframes CRONO-005 integrados à `main`; merge `f8675dce8dc6338689bc27b5cb29df97e3a406f8`.
-- **Ciclo documental atual:** branch `docs/f00-architecture-adrs` para CRONO-006 (Issue #10); ADR-001/002 e C4 L1/L2 propostos para revisão; checagem documental CI aprovada (run 38635987543), sem merge automático.
+- **PR #11:** ADR-001/002 e C4 L1/L2 propostos integrados à `main`; merge `a01118568d2c99c98dbcb3b715d39ce11598b9e8` (propostas ainda sem aceite arquitetural).
+- **Ciclo documental atual:** branch `chore/f00-repository-governance` para CRONO-007 (Issue #12); templates, políticas e quality gate propostos para revisão por PR; sem merge automático.
 - Repositório público; nunca incluir dados reais de clientes ou credenciais.
 
 ## Decisões formalmente autorizadas
@@ -43,19 +44,27 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 | CRONO-003 / Issue #4 | Glossário e invariantes integrados à `main` no PR #5; semântica OQ-03/OQ-08/OQ-09 e aceite humano pendentes |
 | CRONO-004 / Issue #6 | RF/RNF, proposta MoSCoW e registro estruturado integrados à `main` pelo PR #7; validação documental CI aprovada, aceite do PRD e decisões pendentes |
 | CRONO-005 / Issue #8 | Fluxos, wireframes e roteiro de usabilidade integrados à `main` no PR #9; validação documental CI aprovada; testes com usuários e aceite humano pendentes |
-| CRONO-006 / Issue #10 | ADR-001/002 propostos (sem aceite) e C4 L1/L2 documentados na branch; OQ-04/ADR-007, hospedagem e identidade pendentes |
+| CRONO-006 / Issue #10 | ADR-001/002 propostos integrados à `main` no PR #11; CI documental aprovado; aceitação formal das ADRs, OQ-04, hospedagem e identidade pendentes |
+| CRONO-007 / Issue #12 | Templates GitHub, SECURITY, CODEOWNERS, CONTRIBUTING e check único de PR criados em branch; GOV-01/GOV-02 e aceite humano pendentes |
 | F00-E05 | Riscos e métricas preliminares; aprovação pendente |
 | Gate G0 | Não aprovado |
 
 **Numeração preservada:** `CRONO-002` já denomina a tarefa de fixtures XLSX no blueprint (seção L). A atualização pós-merge é uma atividade de governança da Fase 00, não renomeia esse ticket.
 
+## Governança administrativa (ainda sem decisão)
+
+- **GOV-01 — Visibilidade:** o repositório permanece **público**. O blueprint menciona repositório privado; nenhuma alteração de visibilidade foi autorizada ou efetuada.
+- **GOV-02 — Proteções da `main`:** listagem de rulesets retornou `[]`; a leitura da proteção clássica retornou 403 (`Resource not accessible by integration`). Portanto, a proteção clássica não está verificada. Nenhuma regra administrativa foi aplicada nesta etapa.
+- **Quality gate de PR:** workflow adicionado na branch CRONO-007, ainda sem confirmação de execução neste ponto. Checagens apenas documentais/fixtures.
+
 ## Próximos passos
 
 1. Revisar e validar o rascunho AS-IS/TO-BE da F00-E02, distinguindo hipóteses de fatos observados.
 2. Planejar entrevistas/validação dos cenários quando participantes estiverem disponíveis.
-3. Revisar CRONO-006: alternativas de backend e frontend, fronteiras modulares, identidade, contratos e C4; ADR-001/002 propostos, não aprovados.
+3. Revisar CRONO-007: templates, política de segurança e quality gate; deliberar visibilidade e proteções de branch sem assumir que regras administrativas já estejam aplicadas.
 4. Deliberar OQ-03/OQ-04/OQ-05/OQ-06/OQ-07/OQ-08/OQ-09 antes da implementação correspondente; a revisão UX não substitui tais decisões.
-5. Revisar formalmente PRD, decisões abertas e checklist do Gate G0.
+5. Revisar formalmente PRD, ADRs e decisões abertas; registrar critérios e checklist do Gate G0.
+6. Somente após autorização expressa, avaliar GOV-01/GOV-02 e verificar na interface GitHub as regras efetivamente ativas.
 
 ## Limitações observadas
 
