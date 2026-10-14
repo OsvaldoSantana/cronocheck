@@ -1,43 +1,59 @@
-# CronoCheck — Matriz de rastreabilidade — v1.2
-Status: Redigido, aguardando validação técnica. Persistência: baseline v1.2 versionada na `main` pelo PR #1 em 14/10/2026. Nenhum requisito foi implementado, testado ou aprovado por esse fato.
-Existem **fixtures OOXML sintéticas** e um validador estrutural em desenvolvimento (F00-E04). Não existe teste do importador ou do motor CronoCheck: nenhum RF/RNF foi implementado ou validado. IDs de testes de integração só serão registrados quando forem criados. A coluna "ID de teste" permanece "—" até a criação real do teste.
+# CronoCheck — Matriz de rastreabilidade (CRONO-004 / revisão 1.3)
 
-| Requisito | Cenário relacionado | Critério de aceite | Etapa da EAP | Evidência futura | ID de teste | Implementação | Validação |
-|---|---|---|---|---|---|---|---|
-| RF-01 | Todos (pré-condição) | PRD §8 RF-01 | F03-E01, F03-E05 | Teste automatizado + evidência no PR | — (teste de autorização futuro; não existe) | Não implementado | Não validado |
-| RF-02 | Todos (pré-condição) | PRD §8 RF-02 | F03-E02, F03-E03 | Teste automatizado + evidência no PR | — | Não implementado | Não validado |
-| RF-03 | CU-01 | PRD §8 RF-03 | F04-E02, F04-E06 | Teste automatizado + evidência no PR | — (Fixtures planejadas no blueprint H.2: basic-valid.xlsx, invalid-dates.xlsx (inexistentes)) | Não implementado | Não validado |
-| RF-04 | CU-01 | PRD §8 RF-04 | F04-E03 | Teste automatizado + evidência no PR | — | Não implementado | Não validado |
-| RF-05 | CU-01, CU-02 | PRD §8 RF-05 | F04-E04 | Teste automatizado + evidência no PR | — | Não implementado | Não validado |
-| RF-06 | CU-01 | PRD §8 RF-06 | F05-E01 a F05-E05 | Teste automatizado + evidência no PR | — (Fixtures planejadas: duplicate-ids.xlsx, missing-predecessor.xlsx, dependency-cycle.xlsx (inexistentes)) | Não implementado | Não validado |
-| RF-07 | CU-01, CU-03 | PRD §8 RF-07 | F05-E06 | Teste automatizado + evidência no PR | — | Não implementado | Não validado |
-| RF-08 | CU-03, CU-05 | PRD §8 RF-08 | F06-E01, F06-E02, F06-E04 | Teste automatizado + evidência no PR | — | Não implementado | Não validado |
-| RF-09 | CU-02 | PRD §8 RF-09 | F07-E03 | Teste automatizado + evidência no PR | — (Fixture planejada: multi-version-change (gerado; validação CI pendente)) | Não implementado | Não validado |
-| RF-10 | CU-04 | PRD §8 RF-10 | F07-E04 | Teste automatizado + evidência no PR | — | Não implementado | Não validado |
-| RF-11 | CU-03, CU-04 | PRD §8 RF-11 | F03-E04, F06-E02 | Teste automatizado + evidência no PR | — | Não implementado | Não validado |
-| RNF-01 | CU-01 a CU-05 | PRD §9 RNF-01 | F02-E05, F07-E05 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
-| RNF-02 | CU-01 a CU-05 | PRD §9 RNF-02 | F02-E06, F08-E04 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
-| RNF-03 | CU-05 | PRD §9 RNF-03 (provisória) | F08-E02 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
-| RNF-04 | CU-01 | PRD §9 RNF-04 (provisória) | F05-E07, F08-E02 | Relatório de verificação + evidência no PR | — (Fixture planejada: large-5000-activities.xlsx (gerado; validação CI pendente)) | Não implementado | Não validado |
-| RNF-05 | CU-01 | PRD §9 RNF-05 | F04-E05 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
-| RNF-06 | CU-01, CU-04 | PRD §9 RNF-06 | F04-E06, F08-E01 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
-| RNF-07 | CU-03 | PRD §9 RNF-07 | F03-E04 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
-| RNF-08 | N/A — requisito operacional | PRD §9 RNF-08 (provisória) | F08-E03 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
-| RNF-09 | N/A — requisito operacional | PRD §9 RNF-09 | F01-E06 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
-| RNF-10 | N/A — requisito operacional | PRD §9 RNF-10 | F01-E05 | Relatório de verificação + evidência no PR | — | Não implementado | Não validado |
+**Status:** proposta documental, aguardando validação técnica e aceite humano.  
+**Escopo:** requisitos do MVP, sem implementação C# concluída.  
+**Registro auditável:** [`requirements-register.json`](requirements-register.json) • [MoSCoW e priorização](requirements-prioritization.md) • [PRD e critérios de aceite](prd.md) • [Blueprint](../CRONOCHECK_BLUEPRINT_V1.md).
 
-Requisitos sem cenário de usuário (RNF-08, RNF-09, RNF-10) são operacionais e estão rastreados a
-etapas da EAP — não são órfãos.
+Esta matriz é uma **visão humana** derivada do registro de requisitos. A coluna `Must*`
+indica a **proposta de obrigatoriedade para lançamento** conforme o escopo do blueprint/PRD,
+**não** prova aprovação do PRD, nem validação da funcionalidade. Ordem de execução
+e natureza de meta provisória estão detalhadas no registro e no documento MoSCoW.
 
-## Uso no controle de mudanças
-Ao criar issue, teste ou PR reais, preencher "ID de teste" e atualizar as colunas de estado com
-link verificável. Qualquer mudança de critério deve referenciar decisão registrada em
-open-questions.md.
-## Evidências preparatórias F00-E04 (não são testes da aplicação)
+| ID | Cenário CU | MoSCoW | Etapas EAP | Dependências propostas | Critério de aceite | Fixture existente (preparatória) | T-DOM planejado | Implementação / validação |
+|---|---|---|---|---|---|---|---|---|
+| RF-01 | `CU-01`, `CU-02`, `CU-03`, `CU-04`, `CU-05` | Must* | F03-E01, F03-E05 | — | prd.md §8 (RF-01) | — | `T-DOM-10` | Não implementado / Não validado |
+| RF-02 | `CU-01`, `CU-05` | Must* | F03-E02, F03-E03 | `RF-01` | prd.md §8 (RF-02) | — | — | Não implementado / Não validado |
+| RF-03 | `CU-01` | Must* | F04-E02, F04-E06 | `RF-01`, `RF-02` | prd.md §8 (RF-03) | `basic-valid.xlsx`, `invalid-dates.xlsx`, `formula-cells.xlsx` | — | Não implementado / Não validado |
+| RF-04 | `CU-01` | Must* | F04-E03 | `RF-03` | prd.md §8 (RF-04) | — | `T-DOM-05`, `T-DOM-06` | Não implementado / Não validado |
+| RF-05 | `CU-01`, `CU-02` | Must* | F04-E04 | `RF-03`, `RF-04` | prd.md §8 (RF-05) | `multi-version-v1.xlsx`, `multi-version-v2.xlsx` | `T-DOM-08` | Não implementado / Não validado |
+| RF-06 | `CU-01` | Must* | F05-E01..F05-E05 | `RF-05` | prd.md §8 (RF-06) | `duplicate-ids.xlsx`, `missing-predecessor.xlsx`, `dependency-cycle.xlsx`, `inconsistent-dates.xlsx` | — | Não implementado / Não validado |
+| RF-07 | `CU-01`, `CU-03` | Must* | F05-E06 | `RF-06` | prd.md §8 (RF-07) | — | — | Não implementado / Não validado |
+| RF-08 | `CU-03`, `CU-05` | Must* | F06-E01, F06-E02, F06-E04 | `RF-07` | prd.md §8 (RF-08) | — | — | Não implementado / Não validado |
+| RF-09 | `CU-02` | Must* | F07-E03 | `RF-05` | prd.md §8 (RF-09) | `multi-version-v1.xlsx`, `multi-version-v2.xlsx` | — | Não implementado / Não validado |
+| RF-10 | `CU-04` | Must* | F07-E04 | `RF-07` | prd.md §8 (RF-10) | — | — | Não implementado / Não validado |
+| RF-11 | `CU-03`, `CU-04` | Must* | F03-E04, F06-E04, F07 | `RF-01` | prd.md §8 (RF-11) | — | — | Não implementado / Não validado |
+| RNF-01 | `CU-01`, `CU-02`, `CU-03`, `CU-04`, `CU-05` | Must* | F02-E05, F07-E05 | — | prd.md §9 (RNF-01) | — | — | Não implementado / Não validado |
+| RNF-02 | `CU-01`, `CU-02`, `CU-03`, `CU-04`, `CU-05` | Must* | F02-E06, F08-E04 | — | prd.md §9 (RNF-02) | — | — | Não implementado / Não validado |
+| RNF-03 | `CU-05` | Must* | F08-E02 | — | prd.md §9 (RNF-03) | — | — | Não implementado / Não validado |
+| RNF-04 | `CU-01` | Must* | F05-E07, F08-E02 | — | prd.md §9 (RNF-04) | `large-5000-activities.xlsx` | — | Não implementado / Não validado |
+| RNF-05 | `CU-01` | Must* | F04-E05 | `RF-05` | prd.md §9 (RNF-05) | — | `T-DOM-08` | Não implementado / Não validado |
+| RNF-06 | `CU-01`, `CU-04` | Must* | F04-E06, F08-E01 | — | prd.md §9 (RNF-06) | — | — | Não implementado / Não validado |
+| RNF-07 | `CU-03` | Must* | F03-E04 | `RF-11` | prd.md §9 (RNF-07) | — | — | Não implementado / Não validado |
+| RNF-08 | — | Must* | F08-E03 | — | prd.md §9 (RNF-08) | — | — | Não implementado / Não validado |
+| RNF-09 | — | Must* | F01-E06 | — | prd.md §9 (RNF-09) | — | — | Não implementado / Não validado |
+| RNF-10 | — | Must* | F01-E05 | — | prd.md §9 (RNF-10) | — | — | Não implementado / Não validado |
 
-- `docs/product/xlsx-import-contract-v0.md`: proposta do contrato, ainda pendente de OQ-03/OQ-08.
-- `tests/fixtures/expected-results.json`: resultados estruturais esperados, ainda não produzidos pelo motor do produto.
-- `tests/fixtures/validate_fixtures.py`: validação estática dos arquivos OOXML e das hipóteses de teste.
-- `.github/workflows/fixtures-validation.yml`: execução automatizada proposta; consultar estado do PR antes de classificar como aprovada.
+## Observações de auditoria e evidência
 
-Os resultados futuros do parser C# não podem ser declarados aprovados somente porque os arquivos sintéticos passam na verificação estrutural.
+- **21/21 requisitos ligados a etapas EAP**: RF-01..RF-11 e RNF-01..RNF-10.
+- **RNF-08/09/10** são operacionais; ausência de cenário CU específico não os torna órfãos.
+- **RNF-03/04/08** exigem calibração de metas numéricas, ainda provisórias; consultar OQ-05.
+- **RF-11** tem infraestrutura de AuditEvent prevista em F03-E04 e consulta/UX nas fases seguintes (OQ-06 pendente).
+- **F00-E04 já preparou** dez arquivos de fixture OOXML e manifestos em `tests/fixtures/`. O workflow
+  [Fixture contract checks](../../.github/workflows/fixtures-validation.yml) passou com 10 arquivos
+  e uma comparação sintética no PR #3; sua função é verificar o conjunto de testes, **não**
+  validar importação, regras, autorização, desempenho ou backup do produto.
+- **T-DOM-xx** referenciam cenários do documento `domain-invariants.md`; não são nomes
+  de testes automatizados implementados. Os IDs de testes reais serão registrados quando existirem.
+- **OQ-03..OQ-09** continuam não aprovadas. Só OQ-01 e OQ-02 receberam autorização explícita.
+- **Gate G0** e PRD permanecem sem aceite formal.
+
+## Atualização futura e critérios de conformidade
+
+Após uma implementação real, cada requisito deverá ganhar: issue, commit/PR, suíte de testes,
+logs/artefatos do pipeline, resultado de validação humana, release e exceções documentadas.
+Não marcar `implemented`/ `validated` sem referências verificáveis.
+
+O registro estruturado e esta matriz devem permanecer **sincronizados**. A checagem automatizada
+no PR cobre IDs, prioridades, documentos e referências; não examina a qualidade semântica
+dos critérios de aceite nem substitui revisão por profissional.

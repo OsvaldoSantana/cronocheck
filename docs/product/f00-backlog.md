@@ -1,4 +1,4 @@
-# CronoCheck — Backlog detalhado da Fase 00 — v1.5
+# CronoCheck — Backlog detalhado da Fase 00 — v1.6
 
 ## Legenda de estados
 Não iniciado · Em elaboração · Redigido, aguardando validação técnica · Tecnicamente validado ·
@@ -58,6 +58,21 @@ Escopo previsto no blueprint L: modelar conceitos de atividade, calendário, dur
 | CRONO-003-04 | Revisão final e aceite documental | CRONO-003-01 a 03 | Registro de aceite na issue CRONO-003 / PR | Critérios revisados pelo responsável, referências coerentes | Aguardando aprovação |
 
 **Nota:** este trabalho não equivale à etapa F04-E01 de implementação do esquema canônico em C#; o Gate G0 ainda depende dos demais entregáveis F00.
+
+## CRONO-004 — RF/RNF e prioridades MoSCoW (atividade transversal da Fase 00)
+
+Consolidar RF/RNF da baseline em formato humano e legível por máquinas. A classificação de
+obrigatoriedade para lançamento é **proposta**, não aprovação tácita do PRD (OQ-06 pendente).
+
+| ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
+|---|---|---|---|---|---|
+| CRONO-004-01 | Consolidar RF-01..11 e RNF-01..10, com linha de corte MVP | Blueprint, PRD, CRONO-003 | `requirements-register.json`, `requirements-prioritization.md` | 21 entradas únicas; 11 RF Must e 10 RNF Must propostos; nenhuma funcionalidade removida | Redigido, aguardando revisão humana |
+| CRONO-004-02 | Sincronizar rastreabilidade humana | CRONO-004-01, F00-E04 | `traceability-matrix.md` | Critérios, etapas, cenários e fixtures existentes referenciados sem presumir execução de testes C# | Redigido, aguardando revisão humana |
+| CRONO-004-03 | Validar integridade documental automaticamente | CRONO-004-01/02 | `tests/documentation/validate_requirements.py` e workflow GitHub Actions | Checagem automática de 21 requisitos, IDs e referências bem-sucedida | Verificação documental executada com sucesso no GitHub Actions (run 38632240223); revisão humana pendente |
+| CRONO-004-04 | Aprovar prioridades e registrar ressalvas | OQ-05, OQ-06 e PRD | Aprovação formal no PR + `open-questions.md` | Aceite humano datado, sem aprovar Gate G0 tacitamente | Pendente |
+
+O registro de prioridades distingue `Must` como obrigatoriedade **proposta para a release**
+de ordem técnica e de calibração de performance (RNF-03/04/08). Nenhum requisito foi implementado.
 
 ## F00-E05 — Riscos, prioridades e definição de sucesso
 | ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |

@@ -37,3 +37,13 @@ Consulte [`CONTRIBUTING.md`](CONTRIBUTING.md) antes de propor alterações. O co
 - [Invariantes de domínio](docs/product/domain-invariants.md) — regras de integridade, separação entre importação e auditoria e cenários de teste propostos.
 - [Issue CRONO-003](https://github.com/OsvaldoSantana/cronocheck/issues/4) — entregáveis, critérios de aceite e pendências.
 - **Decisões abertas:** OQ-03 (precedências), OQ-08 (semântica temporal/XLSX) e OQ-09 (identidade interna e ambiguidade de IDs); **não** são regras de produção aprovadas.
+
+## Priorização e rastreabilidade (CRONO-004)
+
+- [Matriz de prioridades MoSCoW](docs/product/requirements-prioritization.md): lançamento MVP, sequência técnica e metas de RNF provisórias são eixos distintos.
+- [Registro de requisitos](docs/product/requirements-register.json): estrutura legível por máquinas para 11 RF e 10 RNF.
+- [Matriz de rastreabilidade](docs/product/traceability-matrix.md): fases, cenários, critérios do PRD e fixtures sintéticas.
+- [Validador documental](tests/documentation/validate_requirements.py): verificações de integridade das especificações, **não** testes da aplicação.
+- [Issue CRONO-004](https://github.com/OsvaldoSantana/cronocheck/issues/6): pendências e aceite humano.
+
+As prioridades são propostas para revisão; nenhum RF/RNF foi implementado ou homologado, o PRD permanece pendente e o Gate G0 ainda não foi aprovado.
