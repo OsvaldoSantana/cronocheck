@@ -1,0 +1,693 @@
+{
+  "schema_version": "0.1.0",
+  "document_id": "CRONO-004",
+  "state": "PROPOSAL_PENDING_HUMAN_ACCEPTANCE",
+  "source_of_scope": "docs/CRONOCHECK_BLUEPRINT_V1.md §A.5 and docs/product/prd.md §§7-10",
+  "interpretation": {
+    "moscow_applies_to": "MVP release obligation; not technical implementation order or business impact score",
+    "all_requirements": "Must in the proposed release baseline, not yet approved",
+    "nonfunctional_provisional_targets": "Must complete measurement/review; RNF-03/RNF-04/RNF-08 numeric thresholds remain provisional and require calibration and approval; not SLA",
+    "statuses": "Application has no implemented RF/RNF; existence of fixtures/CI is preparation, not product verification"
+  },
+  "traceability": {
+    "requirements_count": 21,
+    "functional_count": 11,
+    "nonfunctional_count": 10,
+    "open_decisions_not_approved": [
+      "OQ-03",
+      "OQ-04",
+      "OQ-05",
+      "OQ-06",
+      "OQ-07",
+      "OQ-08",
+      "OQ-09"
+    ],
+    "authorized_decisions": [
+      "OQ-01",
+      "OQ-02"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "RF-01",
+      "type": "functional",
+      "title": "Autenticar usuário e verificar permissões em cada projeto",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 1,
+      "first_implementation_milestone": "F03-E01",
+      "wbs_stages": [
+        "F03-E01",
+        "F03-E05"
+      ],
+      "user_scenarios": [
+        "CU-01",
+        "CU-02",
+        "CU-03",
+        "CU-04",
+        "CU-05"
+      ],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §8 (RF-01)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [
+        "T-DOM-10"
+      ],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RF-02",
+      "type": "functional",
+      "title": "Cadastrar, listar e consultar projetos",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 2,
+      "first_implementation_milestone": "F03-E02",
+      "wbs_stages": [
+        "F03-E02",
+        "F03-E03"
+      ],
+      "user_scenarios": [
+        "CU-01",
+        "CU-05"
+      ],
+      "depends_on_proposal": [
+        "RF-01"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-02)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RF-03",
+      "type": "functional",
+      "title": "Receber XLSX e validar extensão, conteúdo, limites e permissões",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 3,
+      "first_implementation_milestone": "F04-E02",
+      "wbs_stages": [
+        "F04-E02",
+        "F04-E06"
+      ],
+      "user_scenarios": [
+        "CU-01"
+      ],
+      "depends_on_proposal": [
+        "RF-01",
+        "RF-02"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-03)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [
+        "tests/fixtures/basic-valid.xlsx",
+        "tests/fixtures/invalid-dates.xlsx",
+        "tests/fixtures/formula-cells.xlsx"
+      ],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RF-04",
+      "type": "functional",
+      "title": "Mapear colunas e mostrar prévia antes da gravação",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 4,
+      "first_implementation_milestone": "F04-E03",
+      "wbs_stages": [
+        "F04-E03"
+      ],
+      "user_scenarios": [
+        "CU-01"
+      ],
+      "depends_on_proposal": [
+        "RF-03"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-04)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [
+        "T-DOM-05",
+        "T-DOM-06"
+      ],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RF-05",
+      "type": "functional",
+      "title": "Persistir original, hash e snapshot normalizado versionado",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 5,
+      "first_implementation_milestone": "F04-E04",
+      "wbs_stages": [
+        "F04-E04"
+      ],
+      "user_scenarios": [
+        "CU-01",
+        "CU-02"
+      ],
+      "depends_on_proposal": [
+        "RF-03",
+        "RF-04"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-05)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [
+        "tests/fixtures/multi-version-v1.xlsx",
+        "tests/fixtures/multi-version-v2.xlsx"
+      ],
+      "proposed_test_scenarios": [
+        "T-DOM-08"
+      ],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": [
+        "OQ-08",
+        "OQ-09"
+      ]
+    },
+    {
+      "id": "RF-06",
+      "type": "functional",
+      "title": "Executar regras de auditoria determinísticas e versionadas",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 6,
+      "first_implementation_milestone": "F05-E01",
+      "wbs_stages": [
+        "F05-E01..F05-E05"
+      ],
+      "user_scenarios": [
+        "CU-01"
+      ],
+      "depends_on_proposal": [
+        "RF-05"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-06)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [
+        "tests/fixtures/duplicate-ids.xlsx",
+        "tests/fixtures/missing-predecessor.xlsx",
+        "tests/fixtures/dependency-cycle.xlsx",
+        "tests/fixtures/inconsistent-dates.xlsx"
+      ],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": [
+        "OQ-03",
+        "OQ-08",
+        "OQ-09"
+      ]
+    },
+    {
+      "id": "RF-07",
+      "type": "functional",
+      "title": "Exibir regra, evidências e tarefas relacionadas em cada achado",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 7,
+      "first_implementation_milestone": "F05-E06",
+      "wbs_stages": [
+        "F05-E06"
+      ],
+      "user_scenarios": [
+        "CU-01",
+        "CU-03"
+      ],
+      "depends_on_proposal": [
+        "RF-06"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-07)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RF-08",
+      "type": "functional",
+      "title": "Classificar, atribuir, comentar e decidir achados",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 8,
+      "first_implementation_milestone": "F06-E01",
+      "wbs_stages": [
+        "F06-E01",
+        "F06-E02",
+        "F06-E04"
+      ],
+      "user_scenarios": [
+        "CU-03",
+        "CU-05"
+      ],
+      "depends_on_proposal": [
+        "RF-07"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-08)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": [
+        "OQ-06"
+      ]
+    },
+    {
+      "id": "RF-09",
+      "type": "functional",
+      "title": "Comparar versões e sinalizar alterações relevantes",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 9,
+      "first_implementation_milestone": "F07-E03",
+      "wbs_stages": [
+        "F07-E03"
+      ],
+      "user_scenarios": [
+        "CU-02"
+      ],
+      "depends_on_proposal": [
+        "RF-05"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-09)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [
+        "tests/fixtures/multi-version-v1.xlsx",
+        "tests/fixtures/multi-version-v2.xlsx"
+      ],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": [
+        "OQ-09"
+      ]
+    },
+    {
+      "id": "RF-10",
+      "type": "functional",
+      "title": "Exportar resultados de auditoria em formato legível e estruturado",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 10,
+      "first_implementation_milestone": "F07-E04",
+      "wbs_stages": [
+        "F07-E04"
+      ],
+      "user_scenarios": [
+        "CU-04"
+      ],
+      "depends_on_proposal": [
+        "RF-07"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-10)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RF-11",
+      "type": "functional",
+      "title": "Consultar histórico de ações e execuções",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": 11,
+      "first_implementation_milestone": "F03-E04",
+      "wbs_stages": [
+        "F03-E04",
+        "F06-E04",
+        "F07"
+      ],
+      "user_scenarios": [
+        "CU-03",
+        "CU-04"
+      ],
+      "depends_on_proposal": [
+        "RF-01"
+      ],
+      "acceptance_source": "docs/product/prd.md §8 (RF-11)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "application_integration_tests",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": [
+        "OQ-06"
+      ]
+    },
+    {
+      "id": "RNF-01",
+      "type": "non_functional",
+      "title": "UX: fluxo principal compreensível e estados recuperáveis",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F02-E05",
+      "wbs_stages": [
+        "F02-E05",
+        "F07-E05"
+      ],
+      "user_scenarios": [
+        "CU-01",
+        "CU-02",
+        "CU-03",
+        "CU-04",
+        "CU-05"
+      ],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-01)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RNF-02",
+      "type": "non_functional",
+      "title": "Acessibilidade WCAG 2.2 AA nos fluxos essenciais",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F02-E06",
+      "wbs_stages": [
+        "F02-E06",
+        "F08-E04"
+      ],
+      "user_scenarios": [
+        "CU-01",
+        "CU-02",
+        "CU-03",
+        "CU-04",
+        "CU-05"
+      ],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-02)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RNF-03",
+      "type": "non_functional",
+      "title": "Resposta p95 de consultas usuais no cenário de referência",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F08-E02",
+      "wbs_stages": [
+        "F08-E02"
+      ],
+      "user_scenarios": [
+        "CU-05"
+      ],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-03)",
+      "numeric_target_status": "provisional_calibration_required",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": [
+        "OQ-05"
+      ]
+    },
+    {
+      "id": "RNF-04",
+      "type": "non_functional",
+      "title": "Processamento de referência XLSX com 5.000 atividades",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F05-E07",
+      "wbs_stages": [
+        "F05-E07",
+        "F08-E02"
+      ],
+      "user_scenarios": [
+        "CU-01"
+      ],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-04)",
+      "numeric_target_status": "provisional_calibration_required",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [
+        "tests/fixtures/large-5000-activities.xlsx"
+      ],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": [
+        "OQ-05"
+      ]
+    },
+    {
+      "id": "RNF-05",
+      "type": "non_functional",
+      "title": "Idempotência de importação/auditoria e concorrência",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F04-E05",
+      "wbs_stages": [
+        "F04-E05"
+      ],
+      "user_scenarios": [
+        "CU-01"
+      ],
+      "depends_on_proposal": [
+        "RF-05"
+      ],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-05)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [
+        "T-DOM-08"
+      ],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RNF-06",
+      "type": "non_functional",
+      "title": "Segurança: ausência de vulnerabilidades críticas/altas não mitigadas",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F04-E06",
+      "wbs_stages": [
+        "F04-E06",
+        "F08-E01"
+      ],
+      "user_scenarios": [
+        "CU-01",
+        "CU-04"
+      ],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-06)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RNF-07",
+      "type": "non_functional",
+      "title": "AuditEvent transacional para mutações críticas",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F03-E04",
+      "wbs_stages": [
+        "F03-E04"
+      ],
+      "user_scenarios": [
+        "CU-03"
+      ],
+      "depends_on_proposal": [
+        "RF-11"
+      ],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-07)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RNF-08",
+      "type": "non_functional",
+      "title": "Backup e restauração com objetivos provisórios RPO/RTO",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F08-E03",
+      "wbs_stages": [
+        "F08-E03"
+      ],
+      "user_scenarios": [],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-08)",
+      "numeric_target_status": "provisional_calibration_required",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": [
+        "OQ-05"
+      ]
+    },
+    {
+      "id": "RNF-09",
+      "type": "non_functional",
+      "title": "Correlação de traces/logs durante operações críticas",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F01-E06",
+      "wbs_stages": [
+        "F01-E06"
+      ],
+      "user_scenarios": [],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-09)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    },
+    {
+      "id": "RNF-10",
+      "type": "non_functional",
+      "title": "Contratos OpenAPI e verificação de mudanças incompatíveis no CI",
+      "mvp_release_required": true,
+      "moscow_proposal": "Must",
+      "technical_sequence_proposal": null,
+      "first_implementation_milestone": "F01-E05",
+      "wbs_stages": [
+        "F01-E05"
+      ],
+      "user_scenarios": [],
+      "depends_on_proposal": [],
+      "acceptance_source": "docs/product/prd.md §9 (RNF-10)",
+      "numeric_target_status": "not_applicable",
+      "planned_evidence": [
+        "nonfunctional_test_report",
+        "human_review"
+      ],
+      "preparatory_fixture_references": [],
+      "proposed_test_scenarios": [],
+      "application_status": "not_implemented",
+      "validation_status": "not_validated",
+      "decision_dependencies": []
+    }
+  ]
+}
