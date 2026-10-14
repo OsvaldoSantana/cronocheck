@@ -55,7 +55,7 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 
 - **GOV-01 — Visibilidade:** o repositório permanece **público**. O blueprint menciona repositório privado; nenhuma alteração de visibilidade foi autorizada ou efetuada.
 - **GOV-02 — Proteções da `main`:** listagem de rulesets retornou `[]`; a leitura da proteção clássica retornou 403 (`Resource not accessible by integration`). Portanto, a proteção clássica não está verificada. Nenhuma regra administrativa foi aplicada nesta etapa.
-- **Quality gate de PR:** workflow adicionado na branch CRONO-007, ainda sem confirmação de execução neste ponto. Checagens apenas documentais/fixtures.
+- **Quality gate de PR:** workflow adicionado na branch CRONO-007; execução GitHub Actions 38637316391 **aprovada** (cinco validadores). Checagens apenas documentais/fixtures.
 
 ## Próximos passos
 
