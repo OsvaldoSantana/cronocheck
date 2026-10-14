@@ -1,0 +1,45 @@
+name: "Proposta de funcionalidade"
+description: "Propor mudança de produto com problema, hipótese, escopo e critérios de aceite"
+title: "feat: "
+body:
+  - type: markdown
+    attributes:
+      value: "O escopo do MVP está documentado no PRD e no blueprint. Uma proposta não altera requisitos nem aprova decisões."
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problema do usuário"
+      description: "Indique persona, tarefa e fricção; se for uma hipótese, sinalize explicitamente."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Solução proposta e alternativas"
+      description: "Inclua alternativas, consequências e o que fica fora do escopo."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Critérios de aceite verificáveis"
+      description: "Descreva entradas, operação, resultado esperado e evidência futura."
+    validations:
+      required: true
+  - type: input
+    id: traceability
+    attributes:
+      label: "RF/RNF, CU, EAP e decisões relacionadas"
+      placeholder: "RF-09, CU-02, OQ-09, F07-E03"
+  - type: textarea
+    id: risks
+    attributes:
+      label: "Riscos, segurança e dados"
+      description: "Impacto em autorização, versões, auditabilidade e uso de dados sintéticos."
+  - type: checkboxes
+    id: status
+    attributes:
+      label: "Estado da proposta"
+      options:
+        - label: "Entendo que esta issue não aprova a mudança de escopo nem o Gate G0."
+          required: true
