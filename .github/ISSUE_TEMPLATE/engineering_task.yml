@@ -1,0 +1,36 @@
+name: "Tarefa técnica / documentação"
+description: "Planejar uma entrega delimitada de engenharia, CI, arquitetura ou documentação"
+title: "chore: "
+body:
+  - type: input
+    id: task
+    attributes:
+      label: "Identificador EAP / CRONO"
+      description: "Use referência do blueprint; não reutilize um identificador já atribuído."
+      placeholder: "CRONO-007 ou F01-E04"
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: "Objetivo e entregáveis"
+      description: "Descreva o trabalho e seus artefatos verificáveis."
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "Dependências e decisões abertas"
+      description: "Indique ADR/OQ não aprovadas, requisitos e bloqueios reais."
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Critérios de aceite e testes"
+      description: "Resultados observáveis, comandos, checks e limitações."
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: "Fora de escopo e riscos"
+      description: "Evite antecipar F01, infra externa, dados reais ou segurança não validada."
