@@ -1,0 +1,10 @@
+# CronoCheck — sugestão de owner por área para revisão.
+# Declara propriedade técnica e solicita revisão no GitHub.
+# NÃO torna aprovação obrigatória por si só: isso depende de regras de branch.
+# Em repositório com mantenedor único, exigir aprovação de CODEOWNERS
+# pode impedir o próprio autor de fazer merge. Consulte docs/engineering/repository-governance.md.
+
+* @OsvaldoSantana
+/docs/ @OsvaldoSantana
+/.github/ @OsvaldoSantana
+/tests/ @OsvaldoSantana
