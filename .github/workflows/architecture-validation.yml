@@ -1,0 +1,31 @@
+name: Architecture ADR documentation checks
+
+on:
+  pull_request:
+    paths:
+      - "docs/architecture/**"
+      - "tests/documentation/validate_architecture.py"
+      - "docs/PROJECT_STATE.md"
+      - ".github/workflows/architecture-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/architecture/**"
+      - "tests/documentation/validate_architecture.py"
+      - ".github/workflows/architecture-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  architecture:
+    name: Validate proposed ADRs and C4 references
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Python
+        run: python3 --version
+      - name: Validate documentation and decision status
+        run: python3 tests/documentation/validate_architecture.py

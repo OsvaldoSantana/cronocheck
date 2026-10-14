@@ -1,4 +1,4 @@
-# CronoCheck — Backlog detalhado da Fase 00 — v1.7
+# CronoCheck — Backlog detalhado da Fase 00 — v1.8
 
 ## Legenda de estados
 Não iniciado · Em elaboração · Redigido, aguardando validação técnica · Tecnicamente validado ·
@@ -89,6 +89,22 @@ Os cenários de uso permanecem hipotéticos, sem entrevistas e sem protótipo cl
 
 **Nota:** F02-E02 prevê protótipo clicável; wireframes Markdown não satisfazem esse aceite e não
 podem ser marcados como interface/protótipo implementados.
+
+## CRONO-006 — Propostas arquiteturais ADR-001/ADR-002 (preparação F01)
+
+Esta etapa antecipa **análise e comparação**, não início formal da Fase 01.
+A escolha final de Vite/Next.js, provedor OIDC e hosting pertence à OQ-04; revisão e aceitação expressas são necessárias.
+
+| ID | Atividade | Dependência | Entrega | Critério verificável | Estado |
+|---|---|---|---|---|---|
+| CRONO-006-01 | Comparar monólito modular, camadas sem fronteiras e microsserviços | Blueprint C.1–C.7, CRONO-003 | `docs/architecture/adr/ADR-001-modular-monolith.md` | Alternativas, forças, ownership, proibições e trade-offs | Redigido; proposta sem aceite |
+| CRONO-006-02 | Comparar React SPA/Vite, Next.js/BFF e frontend acoplado | Blueprint C.2, CRONO-005, OQ-04 | `docs/architecture/adr/ADR-002-frontend-boundary.md` | Auth/CORS/CSRF, API, UX e deploy analisados sem decidir infraestrutura automaticamente | Redigido; proposta sem aceite |
+| CRONO-006-03 | Modelar contexto e contêineres C4 L1/L2 | ADR-001/002 | `docs/architecture/context-and-containers.md` | Atores, fronteiras de confiança, componentes e invariantes explícitos | Redigido; aguardando revisão |
+| CRONO-006-04 | Validar referências e estados documentais | CRONO-006-01..03 | Validador + workflow GitHub Actions | Teste de estrutura e links verde, sem confundir com testes de arquitetura C# | Validação estrutural documental aprovada no GitHub Actions (run 38635987543); revisão humana e decisão arquitetural pendentes |
+| CRONO-006-05 | Ratificar ou rejeitar ADRs / definir cronograma de OQ-04 | OQ-04, F00/G0 | Registro de decisões e aceite do responsável | Data, autoridade, consequências e ADRs atualizados; Gate G0 permanece independente | Pendente |
+
+**Nota:** os ADRs registram alternativas preferidas **provisoriamente**. Publicá-los ou dar merge
+neste PR não aprova OQ-04 nem inicia F01-E01/G1.
 
 ## F00-E05 — Riscos, prioridades e definição de sucesso
 | ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |

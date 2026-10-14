@@ -57,3 +57,12 @@ As prioridades são propostas para revisão; nenhum RF/RNF foi implementado ou h
 
 Os diagramas e wireframes são documentação proposta, **não uma interface navegável**.
 Testes com usuários, protótipos clicáveis, F02 e Gate G0 continuam pendentes.
+
+## Arquitetura proposta — CRONO-006
+
+- [ADR-001: monólito modular](docs/architecture/adr/ADR-001-modular-monolith.md) — alternativas, módulos, invariantes transacionais e critérios de verificação.
+- [ADR-002: fronteira frontend/API](docs/architecture/adr/ADR-002-frontend-boundary.md) — React/TypeScript, comparação Vite/Next.js e segurança OIDC/BFF.
+- [Contexto e contêineres C4 L1/L2](docs/architecture/context-and-containers.md) — fronteiras de confiança e responsabilidades.
+- [Issue CRONO-006](https://github.com/OsvaldoSantana/cronocheck/issues/10) — revisão, evidências e próximos passos.
+
+**Status:** ADRs propostas, sem aceite humano; OQ-04, Gate G0 e F01 permanecem pendentes.
