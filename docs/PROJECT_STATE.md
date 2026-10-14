@@ -34,7 +34,7 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 | F00-E01 | Hipóteses redigidas; entrevistas não realizadas |
 | **F00-E02** | **Em elaboração**: mapa AS-IS hipotético / TO-BE proposto em `docs/product/journey-as-is-to-be.md`, aguardando revisão e validação |
 | F00-E03 / CRONO-001 | PRD redigido; aprovação formal pendente |
-| F00-E04 / CRONO-002 | Contrato XLSX v0 e 10 fixtures sintéticas criados em `docs/f00-xlsx-contract-fixtures`; validação em CI e aceite humano ainda pendentes |
+| F00-E04 / CRONO-002 | Contrato XLSX v0 e 10 fixtures sintéticas criados em `docs/f00-xlsx-contract-fixtures`; validação estrutural CI **aprovada** no workflow run `38629233298` (10 OOXML + 1 comparação); revisão semântica e aceite humano ainda pendentes |
 | F00-E05 | Riscos e métricas preliminares; aprovação pendente |
 | Gate G0 | Não aprovado |
 
