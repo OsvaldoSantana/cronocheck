@@ -6,7 +6,7 @@
 
 ## 1. Padrão de composição e navegação
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ CronoCheck  | Projeto: [Projeto sintético ▾]  |  Versão: [V2 ▾]   [Usuário]   │
 ├──────────────┬───────────────────────────────────────────────────────────────┤
@@ -17,7 +17,7 @@
 │ Relatórios   │ Conteúdo / tabelas / filtros / estados                          │
 │ Configurações│                                                               │
 └──────────────┴───────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 - Largura, espaçamento, densidade e tema são propostas de F02-E03, ainda não tokens finais.
 - Projeto, versão e execução aparecem de modo explícito; nunca trocar apenas porque outro
@@ -30,7 +30,7 @@
 
 ## W-01 — Acesso e seleção de projeto
 
-\`\`\`text
+```text
 ┌───────────────────────────────┐  ┌────────────────────────────────────────────┐
 │ CRONOCHECK                    │  │ Selecionar projeto                          │
 │ Acesso                        │  │                                            │
@@ -40,7 +40,7 @@
 │ novo e retome com segurança.  │  │                                            │
 └───────────────────────────────┘  │ [Criar projeto] (se autorizado)             │
                                    └────────────────────────────────────────────┘
-\`\`\`
+```
 
 **Ações:** autenticar, buscar projeto permitido, selecionar.  
 **Estados:** nenhum projeto autorizado → texto explicativo + solicitar acesso/criar se permitido; sessão expirada → reautenticar; acesso negado → mensagem neutra.  
@@ -48,7 +48,7 @@
 
 ## W-02 — Home operacional do projeto
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Projetos / Projeto sintético A                                                │
 │ Projeto sintético A                    [Importar cronograma XLSX]             │
@@ -63,7 +63,7 @@
 ├──────────────────────────────────────┴───────────────────────────────────────┤
 │ Projetos com acesso autorizado: [Trocar projeto]                               │
 └──────────────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 _*Contagens da figura não são resultados do motor e não representam dados reais._
 **Estados:** projeto sem versão → “Nenhum cronograma importado” + CTA; versão sem
@@ -73,7 +73,7 @@ auditoria → CTA executar; auditoria em execução → status do servidor; zero
 
 ## W-03 — Wizard / etapa 1: selecionar arquivo
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Projeto A / Importações / Nova                                                │
 │ Importar cronograma • Etapa 1 de 4 — Arquivo                                  │
@@ -86,7 +86,7 @@ auditoria → CTA executar; auditoria em execução → status do servidor; zero
 │ Validação: aguardando seleção. Tipos/limites serão verificados pelo servidor.│
 │ [Cancelar]                                              [Continuar →]         │
 └──────────────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 **Erros:** extensão falsa / OOXML inválido / tamanho excessivo / sem permissão →
 mensagem explicativa sem afirmar que a versão foi criada. **Operações longas:**
@@ -95,7 +95,7 @@ upload informa etapa real do servidor e pode ser retomado de modo seguro.
 
 ## W-04 — Wizard / etapa 2: mapear colunas
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Importar cronograma • Etapa 2 de 4 — Mapeamento                               │
 │ ● Arquivo   ● Mapeamento   ○ Prévia   ○ Confirmação                             │
@@ -113,7 +113,7 @@ upload informa etapa real do servidor e pode ser retomado de modo seguro.
 │                                                                              │
 │ [Voltar]                                    [Ver prévia e validar →]           │
 └──────────────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 _*Obrigatoriedade somente do perfil sintético v0; semântica OQ-08 pendente._
 **Erros:** coluna obrigatória não mapeada → resumo e foco na linha com problema;
@@ -123,7 +123,7 @@ decisão irrevogável.
 
 ## W-05 — Wizard / etapa 3: prévia e validação
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Importar cronograma • Etapa 3 de 4 — Prévia                                   │
 │ ● Arquivo   ● Mapeamento   ● Prévia   ○ Confirmação                             │
@@ -139,17 +139,17 @@ decisão irrevogável.
 │ Um aviso não equivale a bloqueio. A auditoria verificará regras após confirmar.│
 │ [Voltar ao mapeamento]                           [Revisar confirmação →]     │
 └──────────────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 _Os valores da figura são exemplos de apresentação, não saídas reais de uma API. Para o fixture `basic-valid.xlsx`, a especificação prevê zero avisos estruturais nesta fase._
-**Erros impeditivos:** por exemplo “Activities!C2: data \`2026-02-30\` não é válida”;
+**Erros impeditivos:** por exemplo “Activities!C2: data `2026-02-30` não é válida”;
 ação primária desabilitada até resolução. **Achados de auditoria (posteriores):**
 duplicatas, predecessoras ausentes ou ciclos não devem ser falsamente rotulados como
 erro do parser. **Regra:** evidenciar origem e valor bruto/normalizado.
 
 ## W-06 — Wizard / etapa 4: confirmar criação da versão
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Importar cronograma • Etapa 4 de 4 — Confirmar                                │
 │ ● Arquivo   ● Mapeamento   ● Prévia   ● Confirmação                             │
@@ -166,7 +166,7 @@ erro do parser. **Regra:** evidenciar origem e valor bruto/normalizado.
 │                                                                              │
 │ [Voltar]                                        [Confirmar nova versão]       │
 └──────────────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 **Estados após ação:** aguardando servidor → versão Vn confirmada; falhou →
 erro e opção de tentar novamente com idempotência; operação já confirmada →
@@ -175,7 +175,7 @@ do servidor. A forma exata de hash e política de confirmação dependem de F04.
 
 ## W-07 — Auditorias e fila de achados
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Projeto A / Auditorias / Execução #R2 • V2 • RuleSet v1                       │
 │ Status: Concluída                       [Executar auditoria novamente]        │
@@ -190,16 +190,16 @@ do servidor. A forma exata de hash e política de confirmação dependem de F04.
 │ Exibindo 1–2 de 2  [Anterior] [Próxima]                                       │
 │ [Retornar ao projeto]  [Comparar versões]  [Exportar relatório]               │
 └──────────────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 Exemplos de linhas pertencem a **fixtures diferentes** e servem somente para mostrar
 layout. Uma execução real exibirá exclusivamente achados associados à versão e regra
 declaradas. Filtros e paginação devem permanecer na URL/estado ao abrir detalhes e voltar.
-Não confundir \`RuleSetVersion\` com a \`ScheduleVersion\`.
+Não confundir `RuleSetVersion` com a `ScheduleVersion`.
 
 ## W-08 — Detalhe de achado e revisão humana
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Pendências (filtros preservados) / Achado • duplicidade de ID                 │
 │ Projeto A • Versão V2 • Auditoria #R2 • Regra duplicate_activity_id/v1       │
@@ -217,19 +217,19 @@ Não confundir \`RuleSetVersion\` com a \`ScheduleVersion\`.
 │ A decisão não altera a evidência original.                                    │
 │ [← Voltar às pendências]                                                       │
 └──────────────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 **Estados essenciais:** usuário sem permissão → somente leitura; achado alterado
 por outro revisor → conflito com recarregar/comparar, sem overwrite; tentativa
 de transição inválida → rejeição clara. Os estados e a forma de justificar
-são hipóteses (F06); \`AuditEvent\` deverá ter ator, instante e contexto.
+são hipóteses (F06); `AuditEvent` deverá ter ator, instante e contexto.
 
 **Mobile (W-08-M):** evidência primeiro, revisão em aba/painel seguinte, histórico
 acessível por navegação de foco; nunca ocultar identificação de projeto/versão.
 
 ## W-09 — Versões e comparação
 
-\`\`\`text
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Projeto A / Versões                                                          │
 │ [Versão base: V1 ▾]   [Versão alvo: V2 ▾]           [Comparar versões]        │
@@ -245,15 +245,15 @@ acessível por navegação de foco; nunca ocultar identificação de projeto/ver
 │                                                                              │
 │ [Inspecionar evidência]         [Retornar às versões]                         │
 └──────────────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
-As linhas reproduzem o cenário sintético \`multi-version-v1/v2\` como
+As linhas reproduzem o cenário sintético `multi-version-v1/v2` como
 **expectativa**, não resultado de API. Não parear duas atividades com ID repetido
 sem sinalizar ambiguidade (OQ-09).
 
 ## W-10 — Relatórios, exportação e configurações
 
-\`\`\`text
+```text
 ┌────────────────────────────────────────┐ ┌────────────────────────────────────┐
 │ Relatórios • Projeto A                 │ │ Configurações • Projeto A          │
 │ Versão [V2 ▾] Execução [R2 ▾]          │ │ Membros e papéis                   │
@@ -263,7 +263,7 @@ sem sinalizar ambiguidade (OQ-09).
 │ Metadados: versão • RuleSet • data     │ │ Usuário sem permissão:             │
 │ [Exportar CSV]   [Exportar PDF]        │ │ "Você não pode alterar membros"    │
 └────────────────────────────────────────┘ └────────────────────────────────────┘
-\`\`\`
+```
 
 **Segurança de exportação:** verificar permissão no backend, incluir metadados do
 escopo autorizado e proteger contra fórmula maliciosa em células CSV.
@@ -272,7 +272,7 @@ reais serão definidas em F03.
 
 ## W-11 — Mobile: wizard e achado em sequência linear
 
-\`\`\`text
+```text
 ┌─────────────────────────────┐   ┌──────────────────────────────┐
 │ ☰  CronoCheck               │   │ ← Achado D001 • V2           │
 │ Projeto sintético A ▾       │   │ Regra / versão              │
@@ -287,7 +287,7 @@ reais serão definidas em F03.
 │ [← Voltar] [Prévia →]        │   │ [Rever antes de confirmar]  │
 └─────────────────────────────┘   │ [Voltar à lista filtrada]    │
                                   └──────────────────────────────┘
-\`\`\`
+```
 
 Nada depende exclusivamente de hover. Preservar foco, título, contexto e
 mensagens. Não prometer paridade em layout pixel-a-pixel: testar tarefas em
@@ -314,7 +314,7 @@ larguras reais na F02.
 - Tabela de prévia com valores brutos/normalizados e origem.
 - Painel de erros impeditivos separado da lista de avisos.
 - Tabela de achados com filtros persistentes e paginação.
-- Visor de evidências \`RuleId/Version/SourceLocator\`.
+- Visor de evidências `RuleId/Version/SourceLocator`.
 - Formulário de revisão com validações e confirmação contextual.
 - Histórico cronológico com ator/instante em UTC e apresentação local.
 - Diff entre versões com categoria de ambiguidade explícita.
