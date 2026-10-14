@@ -1,6 +1,6 @@
 # CronoCheck — PRD v1.2 (Fase 00)
 Status: Redigido, aguardando validação técnica (revisão humana). Não aprovado.
-Persistência: arquivo gerado fora do repositório; ainda NÃO gravado em `docs/product/` do repositório real.
+Persistência: baseline v1.2 versionada na `main` pelo PR #1 em 14/10/2026. O PRD continua aguardando validação técnica e aprovação formal.
 Fonte normativa: CRONOCHECK_BLUEPRINT_V1.md (este PRD detalha, não substitui, o blueprint).
 
 ## 1. Problema e contexto
