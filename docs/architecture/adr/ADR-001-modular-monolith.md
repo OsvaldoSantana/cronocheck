@@ -16,7 +16,7 @@ O MVP exige upload/versão imutável de cronogramas, regras de auditoria puras e
 |---|---|---|
 | Consistência, imutabilidade, eventos transacionais | Alto | RF-05, RF-08, RF-11, RNF-07 |
 | Isolamento de autorização entre projetos | Alto | RF-01, RNF-06 |
-| Agilidade de implantação, teste e operação | Alto | F01-E02/E04/G1 |
+| Agilidade de implantação, teste e operação | Alto | F01-E02 e F01-E04/G1 |
 | Independência e disciplina dos módulos | Alto | Evolução de importação, auditoria e revisão |
 | Escalabilidade operacional e filas | Médio | RNF-04 e jobs persistentes |
 | Capacidade de deploy independente | Baixo, provisório | Sem demanda comprovada no MVP |
