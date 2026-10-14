@@ -17,3 +17,9 @@ Plataforma em planejamento para auditoria e governança de cronogramas de obras 
 ## Colaboração
 
 Consulte [`CONTRIBUTING.md`](CONTRIBUTING.md) antes de propor alterações. O conteúdo documental é preliminar e depende de revisão humana. Não envie cronogramas reais de clientes, credenciais nem outros dados sensíveis para este repositório público.
+
+## Avanço da Fase 00
+
+- [Registro de decisões da Fase 00](docs/product/decisions-2026-10-14.md): OQ-01 e OQ-02 aprovadas; outras pendentes.
+- [Jornadas AS-IS / TO-BE](docs/product/journey-as-is-to-be.md): rascunho hipotético da F00-E02, ainda sem validação empírica ou aceite humano.
+- A autorização para **dados sintéticos** não autoriza publicar arquivos reais de clientes; o PRD e o Gate G0 continuam pendentes de aprovação.
