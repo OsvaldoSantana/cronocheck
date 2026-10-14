@@ -89,7 +89,7 @@ def main() -> int:
     check("### D.2 Telas mínimas" in blueprint, "blueprint UX section absent")
     check("SourceLocator" in flow and "SourceLocator" in wire,
           "finding provenance absent")
-    check("idempotência" in flow and "concorrência" in wire,
+    check("idempotência" in flow.lower() and "concorrência" in wire.lower(),
           "retry/concurrency not covered")
     check("filtros" in flow and "filtros" in wire, "back navigation loses filters")
     check("teclado" in flow and "teclado" in review, "accessibility absent")
