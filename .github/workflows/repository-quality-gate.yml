@@ -1,0 +1,32 @@
+name: Repository quality gate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  documentation-and-fixtures:
+    name: Documentation and synthetic XLSX
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Python version
+        run: python3 --version
+      - name: Requirements and traceability
+        run: python3 tests/documentation/validate_requirements.py
+      - name: UX flows and wireframes
+        run: python3 tests/documentation/validate_ux_flows.py
+      - name: Architecture ADRs and C4
+        run: python3 tests/documentation/validate_architecture.py
+      - name: Synthetic XLSX fixtures
+        run: python3 tests/fixtures/validate_fixtures.py
+      - name: Repository governance
+        run: python3 tests/documentation/validate_governance.py
