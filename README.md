@@ -47,3 +47,13 @@ Consulte [`CONTRIBUTING.md`](CONTRIBUTING.md) antes de propor alterações. O co
 - [Issue CRONO-004](https://github.com/OsvaldoSantana/cronocheck/issues/6): pendências e aceite humano.
 
 As prioridades são propostas para revisão; nenhum RF/RNF foi implementado ou homologado, o PRD permanece pendente e o Gate G0 ainda não foi aprovado.
+
+## Experiência de usuário — CRONO-005
+
+- [Fluxos de navegação e jornadas](docs/ux/flows.md) — FL-01..FL-05, sitemap, contexto de projeto, importação e revisão de achados.
+- [Wireframes de baixa fidelidade](docs/ux/wireframes.md) — W-01..W-11, estados desktop/mobile e casos de erro.
+- [Plano de revisão de usabilidade](docs/ux/usability-review.md) — tarefas UXT-01..10 **não executadas**.
+- [Issue CRONO-005](https://github.com/OsvaldoSantana/cronocheck/issues/8) — escopo, revisão e decisões abertas.
+
+Os diagramas e wireframes são documentação proposta, **não uma interface navegável**.
+Testes com usuários, protótipos clicáveis, F02 e Gate G0 continuam pendentes.
