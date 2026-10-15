@@ -1,5 +1,7 @@
 # CronoCheck — CRONO-005: Fluxos de UX e navegação (v0.1)
 
+> **Atualização de 15/10/2026:** CU-05 é prioridade aprovada (OQ-07), mas ainda hipótese sem entrevista. OQ-03 rejeita FS-only como limite do domínio, OQ-08 vale para fixtures sintéticas, e OQ-09 aprova identidade distinta. OQ-04/05 pendentes. Ver `../product/decisions-2026-10-15.md`.
+
 **Etapa:** F00 / CRONO-005 — [Issue #8](https://github.com/OsvaldoSantana/cronocheck/issues/8).  
 **Estado:** proposta documental para revisão humana; **não** é UI implementada, protótipo clicável ou validação de usuários.  
 **Fontes:** blueprint §§A.7, D.1–D.4, E/F00-E02, E/F02; PRD §§5–9; [jornada hipotética](../product/journey-as-is-to-be.md); [contrato XLSX v0](../product/xlsx-import-contract-v0.md); [glossário](../product/domain-glossary.md).  
@@ -173,7 +175,7 @@ metadados e escopo → solicitar exportação → resultado ou falha recuperáve
 conferir arquivo. O sistema escapa valores perigosos para CSV e aplica permissão
 do servidor na geração, não apenas na tela.
 
-### FL-05 — Home operacional e priorização (CU-05, não aprovada)
+### FL-05 — Home operacional e priorização (CU-05, priorizada; hipótese sem validação com usuários)
 
 Home do projeto → pendências críticas / importações recentes → abrir achado no
 contexto da versão correta → atribuir se autorizado. A extensão para **vários**
