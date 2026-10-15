@@ -1,6 +1,6 @@
 # CronoCheck — Registro de decisões (Fase 00) — v1.4
 Status: OQ-01/OQ-02 aprovadas em 14/10/2026; OQ-03 (diretriz) e OQ-06/OQ-07/OQ-08/OQ-09 aprovadas em 15/10/2026; OQ-04/OQ-05 pendentes.
-Baseline v1.2 publicada na main pelo PR #1; decisões desta revisão documentadas em `decisions-2026-10-14.md`.
+Baseline v1.2 publicada na main pelo PR #1; decisões formalizadas em `decisions-2026-10-14.md` e `decisions-2026-10-15.md`.
 
 | ID | Decisão | Alternativas | Impactos e riscos | Recomendação e justificativa | Dependências | Prioridade | Aprovador | Estado |
 |---|---|---|---|---|---|---|---|---|
