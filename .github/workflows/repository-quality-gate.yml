@@ -32,3 +32,5 @@ jobs:
         run: python3 tests/documentation/validate_governance.py
       - name: Gate G0 readiness dossier
         run: python3 tests/documentation/validate_gate_readiness.py
+      - name: Approved OQ decisions and open choices
+        run: python3 tests/documentation/validate_decisions.py
