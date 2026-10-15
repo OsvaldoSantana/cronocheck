@@ -45,7 +45,7 @@ e natureza de meta provisória estão detalhadas no registro e no documento MoSC
   validar importação, regras, autorização, desempenho ou backup do produto.
 - **T-DOM-xx** referenciam cenários do documento `domain-invariants.md`; não são nomes
   de testes automatizados implementados. Os IDs de testes reais serão registrados quando existirem.
-- **OQ-03..OQ-09** continuam não aprovadas. Só OQ-01 e OQ-02 receberam autorização explícita.
+- **Decisões atualizadas em 15/10/2026:** OQ-01/02 e OQ-06..09 aprovadas; OQ-03 com diretriz de domínio profissional extensível aprovada e detalhamento pendente. OQ-04/05 abertas; o PRD v1.2 ainda exige emenda para OQ-03 e aprovação formal. Ver `decisions-2026-10-15.md` e `requirements-register.json`.
 - **Gate G0** e PRD permanecem sem aceite formal.
 
 ## Atualização futura e critérios de conformidade
