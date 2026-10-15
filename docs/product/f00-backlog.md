@@ -1,4 +1,4 @@
-# CronoCheck — Backlog detalhado da Fase 00 — v2.0
+# CronoCheck — Backlog detalhado da Fase 00 — v2.1
 
 ## Legenda de estados
 Não iniciado · Em elaboração · Redigido, aguardando validação técnica · Tecnicamente validado ·
@@ -54,7 +54,7 @@ Escopo previsto no blueprint L: modelar conceitos de atividade, calendário, dur
 |---|---|---|---|---|---|
 | CRONO-003-01 | Glossário de atividades, versões, auditoria, calendários e vínculos | Blueprint C.5–C.7, PRD, F00-E04 sintética | `docs/product/domain-glossary.md` | Termos, exemplos, origens e pendências documentados | Redigido, aguardando validação técnica e revisão humana |
 | CRONO-003-02 | Invariantes e cenários de verificação | CRONO-003-01 | `docs/product/domain-invariants.md` | Erros vs achados, proveniência, integridade e segurança discriminados | Redigido, aguardando validação técnica |
-| CRONO-003-03 | Deliberar semântica de IDs/duração/predecessoras | OQ-03, OQ-08 e OQ-09 | Decisões documentadas em `open-questions.md` | Aprovação com data, responsável e evidência, sem alteração implícita da semântica do MVP | Pendente |
+| CRONO-003-03 | Deliberar semântica de IDs/duração/predecessoras | OQ-03, OQ-08 e OQ-09 | `decisions-2026-10-15.md` e `dependency-domain-requirements.md` | Diretrizes aprovadas, detalhamento de algoritmos e catálogo de formatos/relacionamentos ainda a verificar | Diretrizes aprovadas em 15/10/2026; PRD e especificação detalhada pendentes |
 | CRONO-003-04 | Revisão final e aceite documental | CRONO-003-01 a 03 | Registro de aceite na issue CRONO-003 / PR | Critérios revisados pelo responsável, referências coerentes | Aguardando aprovação |
 
 **Nota:** este trabalho não equivale à etapa F04-E01 de implementação do esquema canônico em C#; o Gate G0 ainda depende dos demais entregáveis F00.
@@ -135,4 +135,14 @@ sem configuração de branch protection. Publicação de política não aprova G
 | T-E05-05 | Verificação documental de prontidão | T-E05-01..04 | `tests/documentation/validate_gate_readiness.py` + CI unificado | Confirmar referências, 9 riscos, 3 KPIs, estados e ausência de aceite fictício | Verificação documental GitHub Actions aprovada (run 38737727799); aceite humano pendente |
 | T-E05-06 | Gate G0 | F00-E01..05 + decisão humana | Registro formal de gate com responsável, data, evidências e condições | Checklist do blueprint e tratamento explícito de hipóteses/decisões | **Não iniciado — não aprovado** |
 
-Nenhuma entrevista ou teste funcional da aplicação foi realizado. Existem checks automatizados documentais e OOXML; somente OQ-01 e OQ-02 receberam aprovação explícita do responsável pelo produto em 14/10/2026 (`decisions-2026-10-14.md`); PRD, F00-E02 e Gate G0 continuam sem aprovação.
+Nenhuma entrevista ou teste funcional da aplicação foi realizado. Existem checks documentais e OOXML; OQ-01/02 aprovadas em 14/10/2026, OQ-03 (diretriz) e OQ-06/07/08/09 aprovadas em 15/10/2026. OQ-04/05, o detalhamento OQ-03, a revisão/aceite do PRD e Gate G0 continuam pendentes.
+
+## Rodada de decisões — 15/10/2026 (Issue #16)
+
+| Tarefa | Resultado | Estado |
+|---|---|---|
+| Registrar diretriz robusta para campos e predecessoras | `decisions-2026-10-15.md`, `dependency-domain-requirements.md` | Diretriz OQ-03 aprovada; emenda PRD e testes pendentes |
+| Registrar OQ-06, OQ-07, OQ-08, OQ-09 | `open-questions.md`, decisão datada | Aprovadas com limitações explicitadas |
+| Comparar decisões arquiteturais | `architecture-options-oq04.md` | OQ-04 pendente de escolha |
+| Explicar metas e opções de desempenho | `performance-options-oq05.md` | OQ-05 pendente de escolha |
+| Garantir consistência do CI | `tests/documentation/validate_decisions.py` | CI por executar; não substituir aceite do PRD/G0 |

@@ -7,25 +7,33 @@
     "moscow_applies_to": "MVP release obligation; not technical implementation order or business impact score",
     "all_requirements": "Must in the proposed release baseline, not yet approved",
     "nonfunctional_provisional_targets": "Must complete measurement/review; RNF-03/RNF-04/RNF-08 numeric thresholds remain provisional and require calibration and approval; not SLA",
-    "statuses": "Application has no implemented RF/RNF; existence of fixtures/CI is preparation, not product verification"
+    "statuses": "Application has no implemented RF/RNF; existence of fixtures/CI is preparation, not product verification",
+    "domain_model_guardrail": "OQ-03 rejects FS-only as canonical model. The synthetic fixture schema with predecessors_fs is deliberately incomplete and shall not limit the extensible professional schedule domain. PRD v1.2 revision and approval pending."
   },
   "traceability": {
     "requirements_count": 21,
     "functional_count": 11,
     "nonfunctional_count": 10,
     "open_decisions_not_approved": [
-      "OQ-03",
       "OQ-04",
-      "OQ-05",
+      "OQ-05"
+    ],
+    "authorized_decisions": [
+      "OQ-01",
+      "OQ-02",
+      "OQ-03",
       "OQ-06",
       "OQ-07",
       "OQ-08",
       "OQ-09"
     ],
-    "authorized_decisions": [
-      "OQ-01",
-      "OQ-02"
-    ]
+    "approval_scope": {
+      "OQ-03": "Non-FS-only robust and extensible professional schedule model direction approved; detailed rule/formats scope and PRD amendment remain pending",
+      "OQ-06": "AuditEvent transactional foundation in F03-E04 before review UI; no reduction of RF-08..11",
+      "OQ-07": "CU-05 prioritized, not empirically validated",
+      "OQ-08": "Synthetic fixture v0 semantics only, not production calendar rules",
+      "OQ-09": "Internal identity separate from source ID; ambiguity explicit, matching policy TBD"
+    }
   },
   "requirements": [
     {

@@ -84,7 +84,7 @@ def main() -> int:
     check("Gate G0" in flow and "Gate G0" in wire and "Gate G0" in review,
           "G0 references missing")
     check("**Gate G0:** **não aprovado**" in state, "G0 status changed unexpectedly")
-    check("OQ-03 a OQ-09 pendentes" in decisions,
+    check("OQ-04/OQ-05 pendentes" in decisions,
           "open questions mismatch")
     check("### D.2 Telas mínimas" in blueprint, "blueprint UX section absent")
     check("SourceLocator" in flow and "SourceLocator" in wire,

@@ -1,5 +1,7 @@
 # CronoCheck — Dossiê de prontidão do Gate G0 (F00-E05)
 
+> **Atualização 15/10/2026:** OQ-03 aprova diretriz de domínio abrangente sem limite FS-only; OQ-06..09 foram aprovadas com limites; OQ-04/05 permanecem pendentes. A baseline PRD v1.2 precisará de emenda e novo aceite antes de G0. Ver `decisions-2026-10-15.md` e `dependency-domain-requirements.md`.
+
 **Revisão:** 0.1 · **Data:** 2026-10-15 · **Estado:** análise de prontidão, **SEM APROVAÇÃO**.  
 **Issue:** [F00-E05 — #14](https://github.com/OsvaldoSantana/cronocheck/issues/14).  
 **Autoridade:** blueprint v1.0, seção E/FASE 00, seção L/checklist de gates, PRD v1.2, decisões em `open-questions.md`.  
@@ -26,8 +28,8 @@ A autorização anterior **OQ-01** permite continuar com hipóteses e documentar
 
 - PRD baseline: documento existente, **sem aprovação**.
 - Dados de teste anonimizados: em vez de dados reais, foram produzidos dados **inteiramente sintéticos**, com autorização OQ-02. Não há dados reais anonimizados; indicar a diferença.
-- Histórias prioritárias: CU-01..04 propostos; CU-05 adicional ainda sujeito à OQ-07 e validação.
-- Decisões abertas catalogadas: OQ-03..09 e GOV-01/02 (administrativas, fora da decisão de produto), todas pendentes.
+- Histórias prioritárias: CU-01..04 propostos; CU-05 agora priorizado por OQ-07, porém sujeito a validação empírica.
+- Decisões abertas catalogadas: OQ-04/05 e GOV-01/02 ainda pendentes; OQ-03 com diretriz aprovada e detalhamento aberto; OQ-06..09 aprovadas.
 - Nenhuma decisão crítica pode ser tomada implicitamente por merge de documentação.
 
 ## 3. Checklist operacional de gate com evidências

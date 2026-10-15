@@ -64,7 +64,7 @@ def main():
     check("C4 L1" in c4 and "C4 L2" in c4, "context or container scope missing")
     check(c4.count(chr(96)*3+"mermaid")>=3, "C4 diagrams incomplete")
     check("CRONO-006" in blueprint, "blueprint task missing")
-    check("OQ-03 a OQ-09 pendentes" in decisions, "prior open decisions changed")
+    check("OQ-04/OQ-05 pendentes" in decisions, "prior open decisions changed")
     check("**Gate G0:** **não aprovado**" in state and
           "**Fase 01:** não iniciada" in state,
           "phase/gate status changed without approval")

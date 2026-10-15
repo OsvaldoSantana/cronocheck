@@ -89,3 +89,13 @@ alterada; o Gate G0 e a Fase 01 permanecem pendentes.
 
 **Gate G0 continua não aprovado.** Essas entregas são preparação para a
 decisão humana; não autorizam F01 nem comprovam funcionalidade C#/React.
+
+## Decisões de produto — rodada de 15/10/2026
+
+- [Registro de decisões aprovado parcialmente](docs/product/decisions-2026-10-15.md): OQ-03 (diretriz abrangente), OQ-06..09 (com limites); OQ-04/05 pendentes.
+- [Requisitos de domínio extensível e sem perdas](docs/product/dependency-domain-requirements.md): predecessor FS/SS/FF/SF, lag/lead, calendários e preservação de campos não reconhecidos.
+- [Opções de frontend, identidade e hospedagem — OQ-04](docs/product/architecture-options-oq04.md): comparação técnica, sem escolha final.
+- [Opções de desempenho e recuperação — OQ-05](docs/product/performance-options-oq05.md): metas, benchmarks e critérios de aceite, sem medição de produção.
+- [Issue #16](https://github.com/OsvaldoSantana/cronocheck/issues/16) — rastreabilidade e aprovação humana.
+
+**PRD v1.2 requer emenda após a mudança de OQ-03. O Gate G0 segue não aprovado e F01 não iniciada.**

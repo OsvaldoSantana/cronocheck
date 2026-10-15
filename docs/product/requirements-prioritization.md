@@ -1,5 +1,7 @@
 # CronoCheck — MoSCoW e priorização de requisitos (CRONO-004)
 
+> **Atualização de 15/10/2026:** OQ-03 (diretriz abrangente) e OQ-06 a OQ-09 aprovadas com limites; OQ-04/OQ-05 pendentes de deliberação. Este documento é uma proposta histórica de priorização, não um PRD aprovado. Ver `decisions-2026-10-15.md`.
+
 **Status:** proposta em revisão humana · **Data:** 2026-10-14 · **Issue:** [#6 — CRONO-004](https://github.com/OsvaldoSantana/cronocheck/issues/6).  
 **Autoridade:** blueprint v1.0 §A.5 e §B; PRD v1.2 §§7–10 (não aprovado formalmente); decisões OQ-01/02 aprovadas, OQ-03..09 pendentes.  
 **Artefato legível por máquinas:** [`requirements-register.json`](requirements-register.json); **matriz de rastreabilidade:** [`traceability-matrix.md`](traceability-matrix.md).
@@ -62,7 +64,7 @@ Monte Carlo, IA, multiempresa etc.); elas não foram convertidas em novos RF-12+
 | F07 — Insights | RF-09, RF-10, UX final | Comparação de versões, relatórios |
 | F08 — Release | RNF-03, RNF-04, RNF-08, segurança e homologação | Gates de publicação e métricas calibradas |
 
-**OQ-06 permanece pendente:** a posição “11” da antiga sequência RF-01 a RF-11 no PRD
+**OQ-06 foi aprovada em 15/10/2026:** a posição “11” da antiga sequência RF-01 a RF-11 no PRD
 não pode postergar a infraestrutura de `AuditEvent` prevista para F03-E04. A fundação
 de auditabilidade antecede funcionalidades de revisão; a **consulta completa**
 e as telas podem ser incrementais. Essa distinção é um planejamento técnico, não
@@ -77,7 +79,7 @@ uma decisão de rebaixar RF-11.
 - **OQ-09** — igualdade de IDs, identidade canônica e referências ambíguas entre versões.
 - **OQ-01/02** já aprovadas **somente** para avançar com hipóteses e dados sintéticos; não representam validação empírica.
 
-As decisões OQ-04 (stack em F01) e OQ-07 (CU-05) também continuam pendentes, mas não
+A decisão OQ-04 permanece pendente; OQ-07 (CU-05) foi priorizada, mas não
 modificam a linha de corte do MVP nesta proposta.
 
 ## 5. Evidências, rastreabilidade e estado

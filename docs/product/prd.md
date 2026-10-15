@@ -1,4 +1,6 @@
 # CronoCheck — PRD v1.2 (Fase 00)
+
+> **Alerta de decisão de 15/10/2026:** OQ-03 rejeita limitar o domínio a relações FS simples. É necessário revisar o PRD para contemplar modelagem extensível de campos e vínculos de cronogramas profissionais. Esta v1.2 permanece **não aprovada** e não constitui baseline pronta para Gate G0. Ver `decisions-2026-10-15.md` e `dependency-domain-requirements.md`.
 Status: Redigido, aguardando validação técnica (revisão humana). Não aprovado.
 Persistência: baseline v1.2 versionada na `main` pelo PR #1 em 14/10/2026. O PRD continua aguardando validação técnica e aprovação formal.
 Fonte normativa: CRONOCHECK_BLUEPRINT_V1.md (este PRD detalha, não substitui, o blueprint).

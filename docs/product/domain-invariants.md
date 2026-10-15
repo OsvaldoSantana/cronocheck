@@ -1,5 +1,7 @@
 # CronoCheck — Invariantes, estados e critérios do domínio v0.1
 
+> **Nota de 15/10/2026:** OQ-03 e OQ-09 aprovaram diretrizes de extensibilidade e identidade; OQ-08 aprovou apenas convenções de fixtures. As regras profissionais de calendário e normalização permanecem pendentes de detalhamento. Ver `decisions-2026-10-15.md`.
+
 **Referências:** CRONO-003 ([Issue #4](https://github.com/OsvaldoSantana/cronocheck/issues/4)), [glossário](domain-glossary.md), blueprint C.5–C.7, PRD, contrato XLSX v0 e `tests/fixtures/expected-results.json`.  
 **Estado:** análise conceitual para revisão humana. Não cria classes C#, migrações ou código da aplicação.
 
