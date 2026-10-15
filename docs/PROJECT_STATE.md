@@ -1,6 +1,6 @@
 # CronoCheck — Estado do Projeto
 
-**Atualizado em:** 2026-10-14  
+**Atualizado em:** 2026-10-15  
 **Estado:** Fase 00 — descoberta e especificação  
 **Gate G0:** **não aprovado**  
 **Fase 01:** não iniciada  
@@ -15,7 +15,8 @@
 - **PR #7:** registro de requisitos e prioridades CRONO-004 integrados à `main`; merge `6d14fad35704ae8c0ae2314a3e00c32707a5f6ac`.
 - **PR #9:** fluxos e wireframes CRONO-005 integrados à `main`; merge `f8675dce8dc6338689bc27b5cb29df97e3a406f8`.
 - **PR #11:** ADR-001/002 e C4 L1/L2 propostos integrados à `main`; merge `a01118568d2c99c98dbcb3b715d39ce11598b9e8` (propostas ainda sem aceite arquitetural).
-- **Ciclo documental atual:** branch `chore/f00-repository-governance` para CRONO-007 (Issue #12); templates, políticas e quality gate propostos para revisão por PR; sem merge automático.
+- **PR #13:** governança e quality gate integrados à `main` em 15/10/2026; merge `f686831ebb3e9ad5724c1a0a52c56d90cac6104a`.
+- **Ciclo documental atual:** branch `docs/f00-gate-readiness` para F00-E05 (Issue #14); prontidão G0, risco e KPIs em análise; validação documental de seis verificadores aprovada (run 38737727799), sem merge automático.
 - Repositório público; nunca incluir dados reais de clientes ou credenciais.
 
 ## Decisões formalmente autorizadas
@@ -45,8 +46,9 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 | CRONO-004 / Issue #6 | RF/RNF, proposta MoSCoW e registro estruturado integrados à `main` pelo PR #7; validação documental CI aprovada, aceite do PRD e decisões pendentes |
 | CRONO-005 / Issue #8 | Fluxos, wireframes e roteiro de usabilidade integrados à `main` no PR #9; validação documental CI aprovada; testes com usuários e aceite humano pendentes |
 | CRONO-006 / Issue #10 | ADR-001/002 propostos integrados à `main` no PR #11; CI documental aprovado; aceitação formal das ADRs, OQ-04, hospedagem e identidade pendentes |
-| CRONO-007 / Issue #12 | Templates GitHub, SECURITY, CODEOWNERS, CONTRIBUTING e check único de PR criados em branch; GOV-01/GOV-02 e aceite humano pendentes |
-| F00-E05 | Riscos e métricas preliminares; aprovação pendente |
+| CRONO-007 / Issue #12 | Templates, políticas e quality gate integrados à `main` pelo PR #13; nenhum ruleset nem mudança de visibilidade aplicado; GOV-01/GOV-02 pendentes |
+| F00-E05 / Issue #14 | Dossiê de prontidão G0, brief de OQ-03..09 e plano R-01..09/KPI-01..03 em branch; revisão e aprovação pendentes |
+
 | Gate G0 | Não aprovado |
 
 **Numeração preservada:** `CRONO-002` já denomina a tarefa de fixtures XLSX no blueprint (seção L). A atualização pós-merge é uma atividade de governança da Fase 00, não renomeia esse ticket.
@@ -55,15 +57,15 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 
 - **GOV-01 — Visibilidade:** o repositório permanece **público**. O blueprint menciona repositório privado; nenhuma alteração de visibilidade foi autorizada ou efetuada.
 - **GOV-02 — Proteções da `main`:** listagem de rulesets retornou `[]`; a leitura da proteção clássica retornou 403 (`Resource not accessible by integration`). Portanto, a proteção clássica não está verificada. Nenhuma regra administrativa foi aplicada nesta etapa.
-- **Quality gate de PR:** workflow adicionado na branch CRONO-007; execução GitHub Actions 38637316391 **aprovada** (cinco validadores). Checagens apenas documentais/fixtures.
+- **Quality gate de PR:** workflow integrado à `main` pelo PR #13; execução GitHub Actions 38637436783 **aprovada** na branch do PR (cinco validadores). Checagens apenas documentais/fixtures; não foi comprovado que o job é obrigatório na `main`.
 
 ## Próximos passos
 
 1. Revisar e validar o rascunho AS-IS/TO-BE da F00-E02, distinguindo hipóteses de fatos observados.
 2. Planejar entrevistas/validação dos cenários quando participantes estiverem disponíveis.
-3. Revisar CRONO-007: templates, política de segurança e quality gate; deliberar visibilidade e proteções de branch sem assumir que regras administrativas já estejam aplicadas.
+3. Revisar F00-E05: `docs/product/g0-readiness.md`, `risk-kpi-plan.md` e `decision-brief-f00.md`; registrar lacunas e condições, sem declarar G0 aprovado.
 4. Deliberar OQ-03/OQ-04/OQ-05/OQ-06/OQ-07/OQ-08/OQ-09 antes da implementação correspondente; a revisão UX não substitui tais decisões.
-5. Revisar formalmente PRD, ADRs e decisões abertas; registrar critérios e checklist do Gate G0.
+5. Solicitar decisão expressa sobre a baseline PRD, OQ-03..09 (ou adiamento justificado), riscos e aceite de limitações antes de avaliar formalmente G0.
 6. Somente após autorização expressa, avaliar GOV-01/GOV-02 e verificar na interface GitHub as regras efetivamente ativas.
 
 ## Limitações observadas
