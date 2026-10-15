@@ -1,5 +1,7 @@
 # CronoCheck — Brief de decisões para encerramento da Fase 00
 
+> **Atualização 15/10/2026:** este documento descreve recomendações anteriores à rodada de decisões. OQ-03 rejeitou FS-only; OQ-06..09 aprovadas com limites; OQ-04/05 seguem pendentes. Consultar `decisions-2026-10-15.md`, `architecture-options-oq04.md` e `performance-options-oq05.md` como fonte atual.
+
 **Data:** 2026-10-15 · **Status:** recomendações **NÃO APROVADAS**.  
 **Issue:** [F00-E05 #14](https://github.com/OsvaldoSantana/cronocheck/issues/14).  
 **Referências:** `open-questions.md`, `decisions-2026-10-14.md`, PRD §§7–12, `xlsx-import-contract-v0.md`, `domain-invariants.md`, ADR-001/002 e `g0-readiness.md`.
