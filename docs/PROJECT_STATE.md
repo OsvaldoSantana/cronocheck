@@ -16,7 +16,8 @@
 - **PR #9:** fluxos e wireframes CRONO-005 integrados à `main`; merge `f8675dce8dc6338689bc27b5cb29df97e3a406f8`.
 - **PR #11:** ADR-001/002 e C4 L1/L2 propostos integrados à `main`; merge `a01118568d2c99c98dbcb3b715d39ce11598b9e8` (propostas ainda sem aceite arquitetural).
 - **PR #13:** governança e quality gate integrados à `main` em 15/10/2026; merge `f686831ebb3e9ad5724c1a0a52c56d90cac6104a`.
-- **Ciclo documental atual:** branch `docs/f00-gate-readiness` para F00-E05 (Issue #14); prontidão G0, risco e KPIs em análise; validação documental de seis verificadores aprovada (run 38737727799), sem merge automático.
+- **PR #15:** prontidão G0 e matriz de riscos/KPIs integradas à `main`; merge `16af86a1358e5ba942cc1f195dc120a81c86e71e`.
+- **Ciclo documental atual:** branch `docs/f00-oq03-and-approved-decisions`, issue #16; atualização das decisões OQ e comparação técnica OQ-04/OQ-05 em revisão, sem merge automático.
 - Repositório público; nunca incluir dados reais de clientes ou credenciais.
 
 ## Decisões formalmente autorizadas
@@ -25,9 +26,14 @@
 |---|---|---|
 | OQ-01 | **Aprovada** em 14/10/2026 | Prosseguir com personas e cenários hipotéticos, mantendo a validação com usuários pendente. |
 | OQ-02 | **Aprovada** em 14/10/2026 | Usar cronogramas integralmente sintéticos para contrato de importação v0 e fixtures; dados reais requerem autorização posterior. |
-| OQ-03 a OQ-09 | Pendentes | Não presumir aprovação das recomendações. |
+| OQ-03 | **Diretriz aprovada** em 15/10/2026 | Rejeitada modelagem restrita a FS simples; modelo extensível, sem perda silenciosa, com detalhamento técnico e emenda do PRD pendentes. |
+| OQ-04 e OQ-05 | **Pendentes** | Alternativas de stack, autenticação/hospedagem e metas de desempenho em explicação; nenhuma escolha formal. |
+| OQ-06 | **Aprovada** em 15/10/2026 | Base AuditEvent transacional em F03-E04, UI de revisão depois, sem reduzir escopo RF-08..11. |
+| OQ-07 | **Aprovada** em 15/10/2026 | CU-05 multiprojeto priorizado, ainda sem validação empírica. |
+| OQ-08 | **Aprovada** em 15/10/2026 | Convenções válidas para fixtures sintéticas v0, não para calendários profissionais definitivos. |
+| OQ-09 | **Aprovada** em 15/10/2026 | Identidade interna distinta de ID externo; preservar ambiguidades; normalização de igualdade ainda a especificar. |
 
-Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização explícita do responsável pelo produto na conversa.
+Evidências: `docs/product/decisions-2026-10-14.md` e `docs/product/decisions-2026-10-15.md`, correspondentes às manifestações expressas do responsável pelo produto.
 
 ## Entregáveis e andamento
 
@@ -36,7 +42,7 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 | Blueprint v1.0 | Versionado; planejamento, não implementação |
 | `docs/product/prd.md` (v1.2) | Versionado; **aguardando validação técnica e aprovação formal** |
 | `docs/product/personas-jtbd.md` | Versionado; hipóteses, sem entrevistas confirmatórias |
-| `docs/product/open-questions.md` | OQ-01 e OQ-02 aprovadas; demais pendentes |
+| `docs/product/open-questions.md` | OQ-01/02/06/07/08/09 aprovadas e diretriz OQ-03 aprovada; OQ-04/05 pendentes, detalhamento OQ-03 aberto |
 | `docs/product/traceability-matrix.md` | Planejada; sem testes ou funcionalidades implementadas |
 | F00-E01 | Hipóteses redigidas; entrevistas não realizadas |
 | **F00-E02** | **Em elaboração**: mapa AS-IS hipotético / TO-BE proposto em `docs/product/journey-as-is-to-be.md`, aguardando revisão e validação |
@@ -47,7 +53,8 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 | CRONO-005 / Issue #8 | Fluxos, wireframes e roteiro de usabilidade integrados à `main` no PR #9; validação documental CI aprovada; testes com usuários e aceite humano pendentes |
 | CRONO-006 / Issue #10 | ADR-001/002 propostos integrados à `main` no PR #11; CI documental aprovado; aceitação formal das ADRs, OQ-04, hospedagem e identidade pendentes |
 | CRONO-007 / Issue #12 | Templates, políticas e quality gate integrados à `main` pelo PR #13; nenhum ruleset nem mudança de visibilidade aplicado; GOV-01/GOV-02 pendentes |
-| F00-E05 / Issue #14 | Dossiê de prontidão G0, brief de OQ-03..09 e plano R-01..09/KPI-01..03 em branch; revisão e aprovação pendentes |
+| F00-E05 / Issue #14 | Dossiê de prontidão G0 e plano de riscos/KPIs integrados à `main` no PR #15; Gate G0 não aprovado |
+| Decisões 15/10 / Issue #16 | OQ-03 (diretriz) e OQ-06..09 aprovadas; OQ-04/OQ-05 abertas; exige emenda e aprovação da baseline PRD antes de G0 |
 
 | Gate G0 | Não aprovado |
 
@@ -64,10 +71,10 @@ Evidência: `docs/product/decisions-2026-10-14.md`, com base em autorização ex
 1. Revisar e validar o rascunho AS-IS/TO-BE da F00-E02, distinguindo hipóteses de fatos observados.
 2. Planejar entrevistas/validação dos cenários quando participantes estiverem disponíveis.
 3. Revisar F00-E05: `docs/product/g0-readiness.md`, `risk-kpi-plan.md` e `decision-brief-f00.md`; registrar lacunas e condições, sem declarar G0 aprovado.
-4. Deliberar OQ-03/OQ-04/OQ-05/OQ-06/OQ-07/OQ-08/OQ-09 antes da implementação correspondente; a revisão UX não substitui tais decisões.
-5. Solicitar decisão expressa sobre a baseline PRD, OQ-03..09 (ou adiamento justificado), riscos e aceite de limitações antes de avaliar formalmente G0.
+4. Deliberar OQ-04/OQ-05 e especificar cobertura técnica de OQ-03, calendários e validação de campos antes da implementação correspondente.
+5. Preparar emenda formal ao PRD v1.2 compatível com OQ-03 e submetê-la a aceite; depois solicitar decisão expressa sobre G0, riscos e limitações.
 6. Somente após autorização expressa, avaliar GOV-01/GOV-02 e verificar na interface GitHub as regras efetivamente ativas.
 
 ## Limitações observadas
 
-Não há código de aplicação, protótipo clicável, testes de usabilidade com pessoas, testes funcionais da aplicação, deploy ou métricas de produto. Existem checagens de fixtures OOXML aprovadas no GitHub Actions, mas não constituem testes funcionais do CronoCheck. A publicação de documentos e a aprovação das duas decisões não comprovam funcionamento do software ou conclusão da Fase 00.
+Não há código de aplicação, protótipo clicável, testes de usabilidade com pessoas, testes funcionais da aplicação, deploy ou métricas de produto. Existem checagens de fixtures OOXML aprovadas no GitHub Actions, mas não constituem testes funcionais do CronoCheck. A publicação de documentos e a aprovação das decisões de produto não comprovam funcionamento do software ou conclusão da Fase 00.
