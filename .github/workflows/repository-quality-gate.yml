@@ -30,3 +30,5 @@ jobs:
         run: python3 tests/fixtures/validate_fixtures.py
       - name: Repository governance
         run: python3 tests/documentation/validate_governance.py
+      - name: Gate G0 readiness dossier
+        run: python3 tests/documentation/validate_gate_readiness.py
