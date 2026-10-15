@@ -1,4 +1,4 @@
-# CronoCheck — Backlog detalhado da Fase 00 — v1.9
+# CronoCheck — Backlog detalhado da Fase 00 — v2.0
 
 ## Legenda de estados
 Não iniciado · Em elaboração · Redigido, aguardando validação técnica · Tecnicamente validado ·
@@ -128,8 +128,11 @@ sem configuração de branch protection. Publicação de política não aprova G
 ## F00-E05 — Riscos, prioridades e definição de sucesso
 | ID | Descrição | Dependências | Entregável | Critério de aceite verificável | Estado |
 |---|---|---|---|---|---|
-| T-E05-01 | Registro operacional R-01..R-09 | — | prd.md §12 | 9 riscos com 10 atributos; classificação original preservada | Redigido, aguardando validação técnica |
-| T-E05-02 | Métricas de sucesso propostas | T-E03-01 | prd.md §11 | Métricas sem dado inventado | Redigido, aguardando validação técnica |
-| T-E05-03 | Gate G0 | F00-E01..E05 | Registro de gate | Checklist de gate do blueprint completo | Não iniciado — não aprovado nesta execução |
+| T-E05-01 | Registro operacional R-01..R-09 | PRD §12, blueprint §K | `docs/product/risk-kpi-plan.md` | 9 riscos com classificações originais, indicadores, donos sugeridos e riscos residuais explícitos | Redigido; revisão humana, donos efetivos e aceite pendentes |
+| T-E05-02 | Métricas de sucesso propostas | PRD §11, OQ-05 | `docs/product/risk-kpi-plan.md` | 3 KPIs com numeradores, denominadores, eventos e zero baseline inventada; RNF-03/04/08 provisórias | Redigido; validação/adoção ainda pendentes |
+| T-E05-03 | Dossiê de prontidão G0 | F00-E01..E05, checklist de gate no blueprint | `docs/product/g0-readiness.md` | Evidências existentes, limitações e pendências enumeradas sem simular aceite | Redigido; Gate G0 NÃO aprovado |
+| T-E05-04 | Brief para decisões de encerramento F00 | OQ-03..09, PRD, GOV-01/02 | `docs/product/decision-brief-f00.md` | Alternativas/recomendações rastreáveis, não-aprovadas; GOV separadas do escopo de produto | Redigido; deliberações pendentes |
+| T-E05-05 | Verificação documental de prontidão | T-E05-01..04 | `tests/documentation/validate_gate_readiness.py` + CI unificado | Confirmar referências, 9 riscos, 3 KPIs, estados e ausência de aceite fictício | Em elaboração; CI pendente |
+| T-E05-06 | Gate G0 | F00-E01..05 + decisão humana | Registro formal de gate com responsável, data, evidências e condições | Checklist do blueprint e tratamento explícito de hipóteses/decisões | **Não iniciado — não aprovado** |
 
-Nenhuma entrevista ou teste foi realizado. Somente OQ-01 e OQ-02 receberam aprovação explícita do responsável pelo produto em 14/10/2026 (`decisions-2026-10-14.md`); PRD, F00-E02 e Gate G0 continuam sem aprovação.
+Nenhuma entrevista ou teste funcional da aplicação foi realizado. Existem checks automatizados documentais e OOXML; somente OQ-01 e OQ-02 receberam aprovação explícita do responsável pelo produto em 14/10/2026 (`decisions-2026-10-14.md`); PRD, F00-E02 e Gate G0 continuam sem aprovação.
