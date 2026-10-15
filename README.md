@@ -66,3 +66,16 @@ Testes com usuários, protótipos clicáveis, F02 e Gate G0 continuam pendentes.
 - [Issue CRONO-006](https://github.com/OsvaldoSantana/cronocheck/issues/10) — revisão, evidências e próximos passos.
 
 **Status:** ADRs propostas, sem aceite humano; OQ-04, Gate G0 e F01 permanecem pendentes.
+
+## Governança GitHub — CRONO-007
+
+- [Contribuições](CONTRIBUTING.md) e [reporte privado de segurança](SECURITY.md).
+- [Política de branches, rulesets e decisões administrativas](docs/engineering/repository-governance.md).
+- [Templates de issues](.github/ISSUE_TEMPLATE/) para defeitos, propostas de funcionalidades e tarefas.
+- [Template de pull request](.github/PULL_REQUEST_TEMPLATE.md) e [CODEOWNERS](.github/CODEOWNERS).
+- [Quality gate dos PRs](.github/workflows/repository-quality-gate.yml): valida requisitos, UX, arquitetura, fixtures sintéticas e governança; **não** valida código da aplicação.
+- [Issue CRONO-007](https://github.com/OsvaldoSantana/cronocheck/issues/12).
+
+**Decisões pendentes:** GOV-01 (repositório público versus privado) e GOV-02
+(proteções efetivas da `main`). Nenhuma configuração administrativa foi
+alterada; o Gate G0 e a Fase 01 permanecem pendentes.
