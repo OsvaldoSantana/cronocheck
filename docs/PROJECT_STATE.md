@@ -16,7 +16,7 @@
 - **PR #9:** fluxos e wireframes CRONO-005 integrados à `main`; merge `f8675dce8dc6338689bc27b5cb29df97e3a406f8`.
 - **PR #11:** ADR-001/002 e C4 L1/L2 propostos integrados à `main`; merge `a01118568d2c99c98dbcb3b715d39ce11598b9e8` (propostas ainda sem aceite arquitetural).
 - **PR #13:** governança e quality gate integrados à `main` em 15/10/2026; merge `f686831ebb3e9ad5724c1a0a52c56d90cac6104a`.
-- **Ciclo documental atual:** branch `docs/f00-gate-readiness` para F00-E05 (Issue #14); prontidão G0, risco e KPIs em análise, sem merge automático.
+- **Ciclo documental atual:** branch `docs/f00-gate-readiness` para F00-E05 (Issue #14); prontidão G0, risco e KPIs em análise; validação documental de seis verificadores aprovada (run 38737727799), sem merge automático.
 - Repositório público; nunca incluir dados reais de clientes ou credenciais.
 
 ## Decisões formalmente autorizadas
