@@ -1,5 +1,7 @@
 # CronoCheck — Wireframes de baixa fidelidade (CRONO-005 / v0.1)
 
+> **Atualização de 15/10/2026:** CU-05 priorizado pela OQ-07, ainda sem validação empírica; wizard de sete colunas e predecessor FS são apenas ilustrações sintéticas v0, não o escopo do domínio robusto aprovado na OQ-03. Ver `../product/decisions-2026-10-15.md`.
+
 **Status:** proposta de UX para revisão; sem frontend implementado e sem entrevistas.  
 **Escopo:** representações textuais e de navegação, legíveis no GitHub, destinadas a posterior protótipo clicável em F02-E02. **Não** são maquetes de alta fidelidade.  
 **Fontes:** [fluxos](flows.md), blueprint D.1–D.4, PRD, jornada F00-E02 e dados XLSX **sintéticos** da F00-E04.
