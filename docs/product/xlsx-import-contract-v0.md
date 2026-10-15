@@ -1,5 +1,7 @@
 # CronoCheck — Contrato de importação XLSX v0
 
+> **Nota de decisão de 15/10/2026:** OQ-03 rejeita FS-only como limite do produto; OQ-08 aprova **somente a convenção das fixtures sintéticas v0**. `predecessors_fs` e `duration_calendar_days` não definem o modelo canônico final. A interpretação profissional exige expansão de contrato e do PRD. Ver `decisions-2026-10-15.md`.
+
 > **Estado:** proposta técnica da F00-E04, para revisão humana.  
 > **Data:** 2026-10-14 · **Revisão:** 0.1  
 > **Decisões relacionadas:** OQ-02 aprovada (usar exclusivamente dados sintéticos); OQ-03 pendente (escopo final de precedências); OQ-08 proposta (semântica exata do contrato v0).  
