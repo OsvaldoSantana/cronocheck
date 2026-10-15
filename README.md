@@ -79,3 +79,13 @@ Testes com usuários, protótipos clicáveis, F02 e Gate G0 continuam pendentes.
 **Decisões pendentes:** GOV-01 (repositório público versus privado) e GOV-02
 (proteções efetivas da `main`). Nenhuma configuração administrativa foi
 alterada; o Gate G0 e a Fase 01 permanecem pendentes.
+
+## Preparação do Gate G0 (F00-E05)
+
+- [Dossiê de prontidão](docs/product/g0-readiness.md) — evidências e lacunas da Fase 00, sem aprovação presumida.
+- [Brief de decisões](docs/product/decision-brief-f00.md) — recomendações para OQ-03..09 e GOV-01/02 (administrativas).
+- [Plano de riscos e KPIs](docs/product/risk-kpi-plan.md) — R-01..09, KPI-01..03 e metas de RNF provisórias, sem resultados inventados.
+- [Issue F00-E05 / #14](https://github.com/OsvaldoSantana/cronocheck/issues/14) — revisão e deliberações necessárias para G0.
+
+**Gate G0 continua não aprovado.** Essas entregas são preparação para a
+decisão humana; não autorizam F01 nem comprovam funcionalidade C#/React.
