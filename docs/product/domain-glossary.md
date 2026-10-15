@@ -1,5 +1,7 @@
 # CronoCheck — Glossário de domínio e modelo conceitual v0.1
 
+> **Nota de 15/10/2026:** OQ-03 estabelece modelo profissional extensível com FS/SS/FF/SF, lag/lead, calendários, durações e campos externos preservados sem perdas; OQ-09 aprova identidade interna distinta da origem. Ver `dependency-domain-requirements.md` e `decisions-2026-10-15.md`. Detalhes algorítmicos continuam por especificar.
+
 **Ticket:** [CRONO-003 / Issue #4](https://github.com/OsvaldoSantana/cronocheck/issues/4)  
 **Fase:** F00 — descoberta · **Data:** 2026-10-14  
 **Estado:** proposta técnica versionada, aguardando revisão humana. **Não é** implementação nem decisão arquitetural aprovada.  
