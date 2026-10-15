@@ -54,9 +54,9 @@ def validate() -> int:
     check("**Gate G0:** **não aprovado**" in text(ROOT / "docs" / "PROJECT_STATE.md"), "Gate G0 approval mismatch")
     check("aguardando validação técnica" in prd, "PRD approval status unexpectedly changed")
     check("CRONO-004" in blueprint, "CRONO-004 missing from blueprint")
-    check("OQ-03 a OQ-09 pendentes" in decisions, "open decisions summary changed")
+    check("OQ-04/OQ-05 pendentes" in decisions, "open decisions summary changed")
     check(len(re.findall(r"\| OQ-0[12] \|[^\n]*Aprovado", decisions)) == 2,
-          "only OQ-01 and OQ-02 should be approved")
+          "prior approvals OQ-01 and OQ-02 must remain recorded")
     check(len(re.findall(r"^\| (?:RF-\d{2}|RNF-\d{2}) \|", matrix, re.M)) == 21,
           "matrix must have exactly 21 data rows")
     check("Must" in priority and "OQ-06" in priority, "prioritization notes missing")
@@ -132,7 +132,7 @@ def validate() -> int:
     print("PASS CRONO-004 requirements: 11 RF + 10 RNF; all 21 Must (proposed)")
     print("PASS acceptance references, WBS, CU, fixture paths, domain test scenarios")
     print("PASS provisional RNF-03/04/08; dependency graph acyclic")
-    print("PASS source alignment; PRD/Gate G0 unapproved; OQ-03..09 pending")
+    print("PASS source alignment; PRD/Gate G0 unapproved; OQ-04/05 pending")
     print("NOTE: Documentation checks only; zero product features validated.")
     return 0
 
