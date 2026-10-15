@@ -97,6 +97,8 @@ Até que a decisão seja registrada, `docs/PROJECT_STATE.md` deve conservar
 **Recomendação atual:** HOLD até decisão explícita sobre baseline PRD, pendências
 prioritárias, limitações de validação e riscos.
 
+**Verificação automatizada desta revisão:** GitHub Actions [run 38737727799](https://github.com/OsvaldoSantana/cronocheck/actions/runs/38737727799) — seis validadores documentais/OOXML aprovados; isso não aprova G0 nem testa a aplicação.
+
 **Próxima revisão:** responsável pelo produto avalia este dossiê e
 `decision-brief-f00.md`; as decisões aceitas devem atualizar `open-questions.md`,
 PRD e este gate **em uma revisão posterior, com evidência nominal**.
