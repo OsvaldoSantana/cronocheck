@@ -1,4 +1,6 @@
 # CronoCheck — Personas, JTBD e cenários prioritários (Fase 00) — v1.2
+
+> **Atualização de 15/10/2026:** OQ-07 **aprovou a prioridade** de CU-05, mas ainda não há entrevistas ou validação de uso real. Ver `decisions-2026-10-15.md`. Estas personas e jornadas permanecem hipotéticas.
 Status: Redigido, aguardando validação técnica. Não aprovado.
 Persistência: baseline v1.2 versionada na `main` pelo PR #1 em 14/10/2026. Personas e cenários continuam hipotéticos e não validados.
 
@@ -116,7 +118,7 @@ e da tela "Home operacional" do blueprint (D.2), e está marcado como ADIÇÃO P
   cronograma.
 - Evidências disponíveis: nenhuma empírica.
 - Hipóteses pendentes: se o coordenador atua sobre vários projetos ao mesmo tempo; inclusão deste
-  cenário depende de aprovação (OQ-07).
+  cenário **foi priorizado pela OQ-07 em 15/10/2026**, mas a necessidade real continua a validar.
 
 ## 3. Classificação explícita
 - Hipóteses baseadas no blueprint: todas as personas e todos os cenários acima.
